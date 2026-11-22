@@ -1,0 +1,15 @@
+
+[
+  {
+    "id": "sample_1",
+    "text": "Natural language processing (NLP) is useful.",
+    "acronyms": [[29, 32]],
+    "long-forms": [[0, 27]]
+  },
+  {
+    "id": "sample_2",
+    "text": "AI is useful.",
+    "acronyms": [[0, 2]],
+    "long-forms": []
+  }
+]

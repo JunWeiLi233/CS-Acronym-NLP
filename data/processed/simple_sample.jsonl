@@ -1,0 +1,2 @@
+{"id": "sample_1", "tokens": ["Natural", "language", "processing", "(", "NLP", ")", "is", "useful", "."], "labels": ["B-LF", "I-LF", "I-LF", "B-O", "B-AC", "B-O", "B-O", "B-O", "B-O"], "offsets": [[0, 7], [8, 16], [17, 27], [28, 29], [29, 32], [32, 33], [34, 36], [37, 43], [43, 44]], "text": "Natural language processing (NLP) is useful."}
+{"id": "sample_2", "tokens": ["AI", "is", "useful", "."], "labels": ["B-AC", "B-O", "B-O", "B-O"], "offsets": [[0, 2], [3, 5], [6, 12], [12, 13]], "text": "AI is useful."}
