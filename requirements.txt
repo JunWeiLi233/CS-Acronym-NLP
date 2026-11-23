@@ -1,0 +1,6 @@
+numpy
+scipy
+python-crfsuite      # fast CRF backend; without it train_crf.py falls back to src/simple_crf.py
+# optional: POS-tag features for the CRF
+# spacy
+# (then: python -m spacy download en_core_web_sm)
