@@ -1,0 +1,1914 @@
+{
+  "dataset_name": "Computer Science Abbreviation Seed Lexicon",
+  "version": "1.0",
+  "language": "en",
+  "dataset_type": "source-grounded_seed_lexicon_not_a_gold_sentence_corpus",
+  "task": "Detect computer-science abbreviations in academic text and link them to explicitly stated long forms when available.",
+  "source_documents": {
+    "bert": {
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "file": "BERT.pdf",
+      "year": 2019
+    },
+    "dynamo": {
+      "title": "Dynamo: Amazon’s Highly Available Key-value Store",
+      "file": "dynamo-amazons-highly-available-key-value-store.pdf",
+      "year": 2007
+    },
+    "distributed_ml": {
+      "title": "Strategies and Principles of Distributed Machine Learning on Big Data",
+      "file": "Strategies and Principles of Distributed Machine Learning on Big Data.pdf",
+      "year": 2016
+    },
+    "gfs": {
+      "title": "The Google File System",
+      "file": "The Google File System.pdf",
+      "year": 2003
+    }
+  },
+  "annotation_scheme": {
+    "B-AC": "The abbreviation token. The proposal specifies that an abbreviation is a single token.",
+    "B-LF": "The first token of an explicitly stated long form.",
+    "I-LF": "Every later token in that long form.",
+    "B-O": "Any token that is neither an abbreviation nor part of a long form.",
+    "undefined_abbreviations": "Label the short form B-AC; leave long_form null and do not infer an expansion."
+  },
+  "scope_rules": {
+    "included_formation_types": [
+      "acronym",
+      "initialism",
+      "mixed_form",
+      "plural_variation"
+    ],
+    "excluded": [
+      "ordinary clipped forms such as app and config",
+      "ordinary capitalized words",
+      "author names",
+      "mathematical variables",
+      "citation markers",
+      "measurement symbols and units"
+    ],
+    "source_policy": "A long form is populated only when it is stated or clearly paired with the abbreviation in one of the supplied papers. Otherwise it is null.",
+    "ambiguous_forms": "Keep the abbreviation for detection; do not assign a guessed long form. The same short form may have different meanings in different documents."
+  },
+  "entries": [
+    {
+      "short_form": "ACID",
+      "normalized_form": "ACID",
+      "long_form": "Atomicity, Consistency, Isolation, Durability",
+      "formation_type": "acronym",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 2,
+          "text": "ACID (Atomicity, Consistency, Isolation, Durability)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "AFS",
+      "normalized_form": "AFS",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 8,
+          "text": "Like AFS"
+        }
+      ],
+      "notes": "Related file-system name used without expansion in this paper."
+    },
+    {
+      "short_form": "BDB",
+      "normalized_form": "BDB",
+      "long_form": "Berkeley Database",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 10,
+          "text": "Berkeley Database (BDB) Transactional Data Store"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "BERT",
+      "normalized_form": "BERT",
+      "long_form": "Bidirectional Encoder Representations from Transformers",
+      "formation_type": "acronym",
+      "surface_variants": [
+        "BERTBASE",
+        "BERTLARGE"
+      ],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 1,
+          "text": "model called BERT, which stands for Bidirectional Encoder Representations from Transformers"
+        }
+      ],
+      "notes": "BERTBASE and BERTLARGE are model-size variants appearing in the paper."
+    },
+    {
+      "short_form": "BiDAF",
+      "normalized_form": "BiDAF",
+      "long_form": null,
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 8,
+          "text": "BiDAF+ELMo"
+        }
+      ],
+      "notes": "Model name; expansion is not stated in this paper."
+    },
+    {
+      "short_form": "BiLSTM",
+      "normalized_form": "BiLSTM",
+      "long_form": null,
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 7,
+          "text": "BiLSTM+ELMo+Attn"
+        }
+      ],
+      "notes": "Model name in a results table; no expansion is supplied in the paper."
+    },
+    {
+      "short_form": "BSP",
+      "normalized_form": "BSP",
+      "long_form": "bulk synchronous parallel",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 1,
+          "text": "bulk synchronous parallel (BSP)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "CNN",
+      "normalized_form": "CNN",
+      "long_form": "convolutional neural network",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [
+        "CNNs"
+      ],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 13,
+          "text": "convolutional neural networks (CNNs)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "CoLA",
+      "normalized_form": "CoLA",
+      "long_form": "Corpus of Linguistic Acceptability",
+      "formation_type": "acronym",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 16,
+          "text": "CoLA The Corpus of Linguistic Acceptability"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "COTS",
+      "normalized_form": "COTS",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "reference_title",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 17,
+          "text": "Deep learning with COTS HPC systems"
+        }
+      ],
+      "notes": "Appears in a cited paper title; expansion is not stated in the supplied article."
+    },
+    {
+      "short_form": "CRF",
+      "normalized_form": "CRF",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 10,
+          "text": "do not use a CRF"
+        }
+      ],
+      "notes": "The abbreviation appears, but its full form is not stated in this paper."
+    },
+    {
+      "short_form": "CSE",
+      "normalized_form": "CSE",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 10,
+          "text": "CSE (Akbik et al., 2018)"
+        }
+      ],
+      "notes": "Model/method name; expansion is not stated in this paper."
+    },
+    {
+      "short_form": "CVT",
+      "normalized_form": "CVT",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 10,
+          "text": "CVT (Clark et al., 2018)"
+        }
+      ],
+      "notes": "Model/method name; expansion is not stated in this paper."
+    },
+    {
+      "short_form": "DHT",
+      "normalized_form": "DHT",
+      "long_form": "distributed hash table",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 5,
+          "text": "distributed hash table systems"
+        }
+      ],
+      "notes": "The full phrase appears in the article; DHT is used later as its short form."
+    },
+    {
+      "short_form": "DML",
+      "normalized_form": "DML",
+      "long_form": "distance metric learning",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 15,
+          "text": "distance metric learning (DML)"
+        }
+      ],
+      "notes": "Context-specific meaning in this article; do not automatically expand DML the same way in every document."
+    },
+    {
+      "short_form": "DNS",
+      "normalized_form": "DNS",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 10,
+          "text": "a DNS alias"
+        }
+      ],
+      "notes": "Networking acronym used without expansion in this paper."
+    },
+    {
+      "short_form": "ELMo",
+      "normalized_form": "ELMo",
+      "long_form": null,
+      "formation_type": "acronym",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 1,
+          "text": "feature-based approach, such as ELMo"
+        }
+      ],
+      "notes": "Model name used without an expansion in this paper."
+    },
+    {
+      "short_form": "ESIM",
+      "normalized_form": "ESIM",
+      "long_form": null,
+      "formation_type": "unknown",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 8,
+          "text": "ESIM+GloVe and ESIM+ELMo"
+        }
+      ],
+      "notes": "Model name; expansion is not stated in this paper."
+    },
+    {
+      "short_form": "F-Net",
+      "normalized_form": "F-Net",
+      "long_form": null,
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 8,
+          "text": "MIR-MRC (F-Net)"
+        }
+      ],
+      "notes": "Model name; expansion is not stated in this paper."
+    },
+    {
+      "short_form": "FMS",
+      "normalized_form": "FMS",
+      "long_form": "full matrix synchronization",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 15,
+          "text": "full matrix synchronization (FMS)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "GbE",
+      "normalized_form": "GbE",
+      "long_form": "gigabit Ethernet",
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 14,
+          "text": "gigabit ethernet (GbE)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "GFS",
+      "normalized_form": "GFS",
+      "long_form": "Google File System",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "gfs",
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 1,
+          "text": "Google File System (GFS)"
+        },
+        {
+          "source": "dynamo",
+          "pdf_page": 4,
+          "text": "Google File System ... GFS"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "GLUE",
+      "normalized_form": "GLUE",
+      "long_form": "General Language Understanding Evaluation",
+      "formation_type": "acronym",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 7,
+          "text": "The General Language Understanding Evaluation (GLUE) benchmark"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "GPFS",
+      "normalized_form": "GPFS",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 15,
+          "text": "GPFS"
+        }
+      ],
+      "notes": "Related file-system name used without expansion in this paper."
+    },
+    {
+      "short_form": "GPT",
+      "normalized_form": "GPT",
+      "long_form": "Generative Pre-trained Transformer",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 1,
+          "text": "Generative Pre-trained Transformer (OpenAI GPT)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "GPU",
+      "normalized_form": "GPU",
+      "long_form": "graphics processing unit",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [
+        "GPUs"
+      ],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 2,
+          "text": "graphics processing units (GPUs)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "HDFS",
+      "normalized_form": "HDFS",
+      "long_form": "Hadoop Distributed File System",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 16,
+          "text": "Hadoop Distributed File System (HDFS)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "HPC",
+      "normalized_form": "HPC",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "reference_title",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 17,
+          "text": "COTS HPC systems"
+        }
+      ],
+      "notes": "Appears in a cited paper title; expansion is not stated in the supplied article."
+    },
+    {
+      "short_form": "HTTP",
+      "normalized_form": "HTTP",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 7,
+          "text": "request processing framework over HTTP"
+        }
+      ],
+      "notes": "Expansion is not stated in this paper."
+    },
+    {
+      "short_form": "I/O",
+      "normalized_form": "I/O",
+      "long_form": null,
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [
+        "I/Os"
+      ],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "dynamo",
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 10,
+          "text": "I/O throughput"
+        },
+        {
+          "source": "gfs",
+          "pdf_page": 10,
+          "text": "I/O operations"
+        }
+      ],
+      "notes": "Computing abbreviation; retained as distinct from measurement units, which the proposal excludes."
+    },
+    {
+      "short_form": "IDE",
+      "normalized_form": "IDE",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 15,
+          "text": "IDE subsystem"
+        }
+      ],
+      "notes": "Hardware-interface acronym used without expansion in this paper."
+    },
+    {
+      "short_form": "IP",
+      "normalized_form": "IP",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 6,
+          "text": "IP addresses"
+        }
+      ],
+      "notes": "Protocol acronym used without expansion in this paper."
+    },
+    {
+      "short_form": "LDA",
+      "normalized_form": "LDA",
+      "long_form": "latent Dirichlet allocation",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 4,
+          "text": "Latent Dirichlet allocation (LDA)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "LM",
+      "normalized_form": "LM",
+      "long_form": "language model",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [
+        "LMs"
+      ],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 4,
+          "text": "standard LM"
+        }
+      ],
+      "notes": "The paper also uses the phrase ‘language model’ in full."
+    },
+    {
+      "short_form": "LRU",
+      "normalized_form": "LRU",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 6,
+          "text": "LRU buffer cache"
+        }
+      ],
+      "notes": "Cache-policy acronym used without expansion in this paper."
+    },
+    {
+      "short_form": "LSTM",
+      "normalized_form": "LSTM",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [
+        "LSTMs"
+      ],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 2,
+          "text": "using LSTMs"
+        }
+      ],
+      "notes": "The abbreviation appears, but its full form is not stated in this paper."
+    },
+    {
+      "short_form": "LTR",
+      "normalized_form": "LTR",
+      "long_form": "left-to-right",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 8,
+          "text": "trained as a left-to-right LM"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "MCMC",
+      "normalized_form": "MCMC",
+      "long_form": "Markov Chain Monte Carlo",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 2,
+          "text": "Markov Chain Monte Carlo (MCMC)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "MD5",
+      "normalized_form": "MD5",
+      "long_form": null,
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 5,
+          "text": "applies a MD5 hash on the key"
+        }
+      ],
+      "notes": "Hash algorithm name used without expansion in this paper."
+    },
+    {
+      "short_form": "MedLDA",
+      "normalized_form": "MedLDA",
+      "long_form": null,
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 16,
+          "text": "supervised topic models (MedLDA)"
+        }
+      ],
+      "notes": "Algorithm/model name; the paper does not explicitly define this short form."
+    },
+    {
+      "short_form": "MF",
+      "normalized_form": "MF",
+      "long_form": "matrix factorization",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 9,
+          "text": "matrix factorization (MF)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "MIR-MRC",
+      "normalized_form": "MIR-MRC",
+      "long_form": null,
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 8,
+          "text": "MIR-MRC (F-Net)"
+        }
+      ],
+      "notes": "Model name; expansion is not stated in this paper."
+    },
+    {
+      "short_form": "ML",
+      "normalized_form": "ML",
+      "long_form": "machine learning",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 1,
+          "text": "machine learning (ML) systems"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "MLM",
+      "normalized_form": "MLM",
+      "long_form": "masked language model",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 2,
+          "text": "masked language model (MLM)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "MLR",
+      "normalized_form": "MLR",
+      "long_form": "multiclass logistic regression",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 15,
+          "text": "multiclass logistic regression (MLR)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "MNLI",
+      "normalized_form": "MNLI",
+      "long_form": "Multi-Genre Natural Language Inference",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 16,
+          "text": "MNLI Multi-Genre Natural Language Inference"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "MPM",
+      "normalized_form": "MPM",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [
+        "MPMs"
+      ],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 15,
+          "text": "For a variety of MPMs"
+        }
+      ],
+      "notes": "Used for model-parallel methods/programs; the paper does not explicitly define the short form."
+    },
+    {
+      "short_form": "MRPC",
+      "normalized_form": "MRPC",
+      "long_form": "Microsoft Research Paraphrase Corpus",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 16,
+          "text": "MRPC Microsoft Research Paraphrase Corpus"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "NASD",
+      "normalized_form": "NASD",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 14,
+          "text": "NASD architecture"
+        }
+      ],
+      "notes": "Related storage architecture name used without expansion in this paper."
+    },
+    {
+      "short_form": "NER",
+      "normalized_form": "NER",
+      "long_form": "named entity recognition",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 2,
+          "text": "named entity recognition"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "NFS",
+      "normalized_form": "NFS",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 4,
+          "text": "centralized server like NFS"
+        }
+      ],
+      "notes": "File-system acronym used without expansion in this paper."
+    },
+    {
+      "short_form": "NIO",
+      "normalized_form": "NIO",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 10,
+          "text": "Java NIO channels"
+        }
+      ],
+      "notes": "Java API name used without expansion in this paper."
+    },
+    {
+      "short_form": "NLI",
+      "normalized_form": "NLI",
+      "long_form": "natural language inference",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 4,
+          "text": "Natural Language Inference (NLI)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "NLP",
+      "normalized_form": "NLP",
+      "long_form": "natural language processing",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 1,
+          "text": "natural language processing tasks"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "NSP",
+      "normalized_form": "NSP",
+      "long_form": "next sentence prediction",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 4,
+          "text": "Next Sentence Prediction (NSP)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "P2P",
+      "normalized_form": "P2P",
+      "long_form": "peer-to-peer",
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "dynamo",
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 4,
+          "text": "peer-to-peer (P2P) systems"
+        },
+        {
+          "source": "distributed_ml",
+          "pdf_page": 13,
+          "text": "peer-to-peer (P2P) topology"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "POSIX",
+      "normalized_form": "POSIX",
+      "long_form": null,
+      "formation_type": "acronym",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 2,
+          "text": "does not implement a standard API such as POSIX"
+        }
+      ],
+      "notes": "Standard name used without expansion in this paper."
+    },
+    {
+      "short_form": "QA",
+      "normalized_form": "QA",
+      "long_form": "question answering",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 4,
+          "text": "Question Answering (QA)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "QNLI",
+      "normalized_form": "QNLI",
+      "long_form": "Question Natural Language Inference",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 16,
+          "text": "QNLI Question Natural Language Inference"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "QQP",
+      "normalized_form": "QQP",
+      "long_form": "Quora Question Pairs",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 16,
+          "text": "QQP Quora Question Pairs"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "RAID",
+      "normalized_form": "RAID",
+      "long_form": "redundant arrays of inexpensive disks",
+      "formation_type": "acronym",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 15,
+          "text": "redundant arrays of inexpensive disks (RAID)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "RDBMS",
+      "normalized_form": "RDBMS",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 2,
+          "text": "functionality offered by an RDBMS"
+        }
+      ],
+      "notes": "The article discusses relational databases but does not explicitly spell out RDBMS."
+    },
+    {
+      "short_form": "RPC",
+      "normalized_form": "RPC",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [
+        "RPCs"
+      ],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 11,
+          "text": "RPC requests and replies"
+        }
+      ],
+      "notes": "Remote-call acronym used without expansion in this paper."
+    },
+    {
+      "short_form": "RTE",
+      "normalized_form": "RTE",
+      "long_form": "Recognizing Textual Entailment",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 16,
+          "text": "RTE Recognizing Textual Entailment"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "RTL",
+      "normalized_form": "RTL",
+      "long_form": "right-to-left",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 8,
+          "text": "separate LTR and RTL models"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "S3",
+      "normalized_form": "S3",
+      "long_form": "Amazon Simple Storage Service",
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 1,
+          "text": "Amazon Simple Storage Service ... known as Amazon S3"
+        }
+      ],
+      "notes": "Product/service identifier; retained because the article explicitly links it to the full service name."
+    },
+    {
+      "short_form": "SAP",
+      "normalized_form": "SAP",
+      "long_form": "structure aware parallelization",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 8,
+          "text": "structure aware parallelization (SAP)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "SDCA",
+      "normalized_form": "SDCA",
+      "long_form": "stochastic dual coordinate ascent",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 15,
+          "text": "stochastic dual coordinate ascent (SDCA)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "SEDA",
+      "normalized_form": "SEDA",
+      "long_form": null,
+      "formation_type": "unknown",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 10,
+          "text": "similar to the SEDA architecture"
+        }
+      ],
+      "notes": "Architecture name used without expansion in this paper."
+    },
+    {
+      "short_form": "SFB",
+      "normalized_form": "SFB",
+      "long_form": "sufficient factor broadcasting",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 15,
+          "text": "Sufficient factor broadcasting (SFB)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "SGD",
+      "normalized_form": "SGD",
+      "long_form": "stochastic gradient descent",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 5,
+          "text": "stochastic gradient descent (SGD)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "SLA",
+      "normalized_form": "SLA",
+      "long_form": "Service Level Agreement",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [
+        "SLAs"
+      ],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "dynamo"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "dynamo",
+          "pdf_page": 3,
+          "text": "Service Level Agreement (SLA)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "SLQA",
+      "normalized_form": "SLQA",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 8,
+          "text": "SLQA+ (Single)"
+        }
+      ],
+      "notes": "Model name; expansion is not stated in this paper."
+    },
+    {
+      "short_form": "SOTA",
+      "normalized_form": "SOTA",
+      "long_form": "state of the art",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 7,
+          "text": "Pre-OpenAI SOTA"
+        }
+      ],
+      "notes": "The paper also repeatedly uses the unabbreviated phrase ‘state of the art’."
+    },
+    {
+      "short_form": "SPGD",
+      "normalized_form": "SPGD",
+      "long_form": "stochastic proximal gradient descent",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 15,
+          "text": "stochastic proximal gradient descent (SPGD)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "SQuAD",
+      "normalized_form": "SQuAD",
+      "long_form": null,
+      "formation_type": "acronym",
+      "surface_variants": [
+        "SQuAD v1.1",
+        "SQuAD v2.0"
+      ],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 1,
+          "text": "SQuAD v1.1 question answering"
+        }
+      ],
+      "notes": "The paper uses the dataset name but does not spell out SQuAD; no expansion is inferred."
+    },
+    {
+      "short_form": "SSP",
+      "normalized_form": "SSP",
+      "long_form": "stale synchronous parallel",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 11,
+          "text": "stale synchronous parallel (SSP)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "SST-2",
+      "normalized_form": "SST-2",
+      "long_form": "Stanford Sentiment Treebank",
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 16,
+          "text": "SST-2 The Stanford Sentiment Treebank"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "STS-B",
+      "normalized_form": "STS-B",
+      "long_form": "Semantic Textual Similarity Benchmark",
+      "formation_type": "mixed_form",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 16,
+          "text": "STS-B The Semantic Textual Similarity Benchmark"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "SVM",
+      "normalized_form": "SVM",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "reference_title",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 17,
+          "text": "large-scale linear SVM"
+        }
+      ],
+      "notes": "Appears in a cited paper title; expansion is not stated in the supplied article."
+    },
+    {
+      "short_form": "SWAG",
+      "normalized_form": "SWAG",
+      "long_form": "Situations With Adversarial Generations",
+      "formation_type": "acronym",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 8,
+          "text": "The Situations With Adversarial Generations (SWAG) dataset"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "short_form": "TCP",
+      "normalized_form": "TCP",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "gfs"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "gfs",
+          "pdf_page": 3,
+          "text": "TCP connection"
+        }
+      ],
+      "notes": "Protocol acronym used without expansion in this paper."
+    },
+    {
+      "short_form": "TPU",
+      "normalized_form": "TPU",
+      "long_form": null,
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "not_expanded_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 5,
+          "text": "single Cloud TPU"
+        }
+      ],
+      "notes": "The expansion is not stated in the paper."
+    },
+    {
+      "short_form": "WNLI",
+      "normalized_form": "WNLI",
+      "long_form": "Winograd NLI",
+      "formation_type": "initialism",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "bert"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "bert",
+          "pdf_page": 16,
+          "text": "WNLI Winograd NLI"
+        }
+      ],
+      "notes": "The paper gives ‘Winograd NLI’; NLI is separately expanded as natural language inference."
+    },
+    {
+      "short_form": "YARN",
+      "normalized_form": "YARN",
+      "long_form": "Yet Another Resource Negotiator",
+      "formation_type": "acronym",
+      "surface_variants": [],
+      "observed_plural_forms": [],
+      "expansion_status": "explicit_in_source",
+      "source_documents": [
+        "distributed_ml"
+      ],
+      "occurrence_context": "main_text",
+      "evidence": [
+        {
+          "source": "distributed_ml",
+          "pdf_page": 16,
+          "text": "Yet Another Resource Negotiator (YARN)"
+        }
+      ],
+      "notes": null
+    }
+  ],
+  "excluded_or_review_items": [
+    {
+      "form": "app",
+      "reason": "Clipped form explicitly excluded by the proposal."
+    },
+    {
+      "form": "config",
+      "reason": "Clipped form explicitly excluded by the proposal."
+    },
+    {
+      "form": "GB, MB, TB, KB, Mbps, GHz",
+      "reason": "Measurement symbols/units are excluded by the proposal."
+    },
+    {
+      "form": "[CLS], [SEP], [MASK]",
+      "reason": "Model-specific special-token markers; review separately rather than treating them as ordinary lexical abbreviations."
+    },
+    {
+      "form": "ACM, SOSP, NAACL-HLT, EMNLP, ICLR, IEEE, USENIX",
+      "reason": "Publication, venue, or organization names; excluded from this seed lexicon to reduce citation-related false positives."
+    }
+  ],
+  "training_guidance": {
+    "important": "This file is a lexicon of abbreviation forms found in the four papers, not a complete supervised training corpus. Train the token classifier on sentence-level examples annotated with the BIO-style labels above.",
+    "recommended_split": "Split by paper, not by random sentence, so sentences from one source document do not leak across train and development sets.",
+    "suggested_use": [
+      "Use entries with explicit long forms as weak supervision or annotation assistance.",
+      "Use entries with null long_form as abbreviation-detection examples only; never manufacture a definition.",
+      "Use observed_plural_forms and surface_variants to make sure plural and model-name variants are included in annotation.",
+      "Manually review every candidate before treating it as gold-standard training data, especially names appearing only in references or result tables."
+    ]
+  },
+  "coverage_note": "This is a curated inventory of 85 CS-relevant abbreviation candidates identified in the four supplied papers, including their main text, tables, figures, captions, and selected related-work references. It is not a claim that every capitalized string or every acronym in the papers is included. Publication/organization names, measurement units, and mathematical symbols were filtered according to the proposal."
+}
