@@ -1,28 +1,26 @@
+"""Convert span annotations into token-level BIO records for model training."""
+
+import argparse
 import json
 import re
 from collections import Counter
 from pathlib import Path
 
-"""
-    B-AC: Beginning of an abbreviation
-    B-LF: Beginning of a long form
-    I-LF: Inside a long form
-    B-O: Other token(not an abbreviation or long form)
-"""
+from terminal_table import choose_dataset, format_table
+from utils import DATA_DIR, LABELS, OUTSIDE, ROOT, load_jsonl, save_jsonl
 
-LABELS = {"B-AC", "B-LF", "I-LF", "B-O"}
-
-# keep punctuation as separate tokens in here
+# Words with internal hyphens or apostrophes stay together. Punctuation becomes
+# its own token so annotation offsets remain precise.
 TOKEN_PATTERN = re.compile(r"\w+(?:[-']\w+)*|[^\w\s]", re.UNICODE)
 
 
 def tokenize(text):
-    # Return tokens with their character offsets
+    """Return tokens together with their character offsets in ``text``."""
     return [
         {
             "text": match.group(),
             "start": match.start(),
-            "end": match.end()
+            "end": match.end(),
         }
         for match in TOKEN_PATTERN.finditer(text)
     ]
@@ -30,7 +28,7 @@ def tokenize(text):
 
 
 def get_spans(record, field):
-    """Read annotations in the form: [[start,end],...]"""
+    """Return ``field`` annotations as validated ``(start, end)`` pairs."""
     spans = record.get(field, [])
     if not isinstance(spans, list):
         raise ValueError(f"{field} must be a list")
@@ -65,14 +63,14 @@ def assign_span(tokens, labels, start, end, kind):
     if first["start"] != start or last["end"] != end:
         raise ValueError("Span does not align with token boundaries")
 
-    # check if it is complete tokens
+    # A character span must cover whole tokens. Otherwise BIO labels would no
+    # longer identify the original annotated text.
     for token in tokens:
         overlaps = token["start"] < end and token["end"] > start
         contained = token["start"] >= start and token["end"] <= end
         if overlaps and not contained:
             raise ValueError("Partial token overlap detected")
 
-    # labeling
     if kind == "AC":
         if len(matching) != 1:
             raise ValueError("Abbreviation spans must contain one token")
@@ -82,9 +80,8 @@ def assign_span(tokens, labels, start, end, kind):
     else:
         raise ValueError(f"Unknown annotation kind: {kind}")
 
-    # wrap up labeling huzz---
     for i, label in zip(matching, new_labels):
-        if labels[i] != "B-O":
+        if labels[i] != OUTSIDE:
             raise ValueError(f"Overlapping annotations at token {i}")
         labels[i] = label
 
@@ -114,8 +111,47 @@ def repair_long_form_spans(text, spans):
     return repaired, corrections
 
 
+def get_pairs(record, acronym_spans, long_form_spans):
+    """Read explicit abbreviation/long-form links by their raw span indexes.
+
+    ``pairs`` is optional so existing corpora continue to use the evaluation
+    linker's inferred pairs. When supplied, even an empty list is meaningful:
+    it says that none of the spans in this sentence form a definition pair.
+    """
+    if "pairs" not in record:
+        return None
+    pairs = record["pairs"]
+    if not isinstance(pairs, list):
+        raise ValueError("pairs must be a list")
+
+    validated = []
+    for pair in pairs:
+        if (
+            not isinstance(pair, (list, tuple))
+            or len(pair) != 2
+            or not all(type(index) is int for index in pair)
+        ):
+            raise ValueError(f"Invalid pair indexes: {pair}")
+        acronym_index, long_form_index = pair
+        if not 0 <= acronym_index < len(acronym_spans):
+            raise ValueError(f"Acronym pair index out of range: {acronym_index}")
+        if not 0 <= long_form_index < len(long_form_spans):
+            raise ValueError(f"Long-form pair index out of range: {long_form_index}")
+        validated.append((acronym_index, long_form_index))
+    return validated
+
+
+def span_tokens(tokens, start, end):
+    """Return the complete tokens aligned to a validated character span."""
+    return [
+        token["text"]
+        for token in tokens
+        if token["start"] >= start and token["end"] <= end
+    ]
+
+
 def convert_record(record, index):
-    """Convert one raw sample to token-level BIO labels"""
+    """Convert one annotated sentence into the project's JSONL record format."""
     if not isinstance(record, dict):
         raise ValueError("Each record must be a JSON object")
 
@@ -123,12 +159,11 @@ def convert_record(record, index):
     if not isinstance(text, str):
         raise ValueError("Missing or invalid text field")
 
-    # Read annotations FIRST
     acronym_spans = get_spans(record, "acronyms")
     long_form_spans = get_spans(record, "long-forms")
     long_form_spans, corrections = repair_long_form_spans(text, long_form_spans)
+    pairs = get_pairs(record, acronym_spans, long_form_spans)
 
-    # Validate abbreviation spans
     previous_end = 0
     for start, end in sorted(acronym_spans):
         if end > len(text):
@@ -139,9 +174,8 @@ def convert_record(record, index):
             raise ValueError("Empty abbreviation span")
         previous_end = end
 
-    # Pass the abbreviation spans to tokenize()
     tokens = tokenize(text)
-    labels = ["B-O"] * len(tokens)
+    labels = [OUTSIDE] * len(tokens)
 
     for start, end in acronym_spans:
         assign_span(tokens, labels, start, end, "AC")
@@ -151,10 +185,10 @@ def convert_record(record, index):
             raise ValueError("Long-form span exceeds text length")
         assign_span(tokens, labels, start, end, "LF")
 
-    assert len(tokens) == len(labels)
-    assert all(label in LABELS for label in labels)
+    if len(tokens) != len(labels) or not all(label in LABELS for label in labels):
+        raise AssertionError("Token and BIO label output is inconsistent")
 
-    return {
+    converted = {
         "id": str(record.get("id", index)),
         "tokens": [token["text"] for token in tokens],
         "labels": labels,
@@ -162,15 +196,26 @@ def convert_record(record, index):
         "text": text,
         "corrections": corrections
     }
+    if record.get("doc_id") is not None:
+        converted["doc_id"] = record["doc_id"]
+    if pairs is not None:
+        converted["pairs"] = [
+            [
+                span_tokens(tokens, *acronym_spans[acronym_index])[0],
+                " ".join(span_tokens(tokens, *long_form_spans[long_form_index])).lower(),
+            ]
+            for acronym_index, long_form_index in pairs
+        ]
+    return converted
 
 
 def load_records(path):
-    """Load a JSON array or a JSONL file"""
+    """Load a JSON array or JSONL file containing annotation records."""
     path = Path(path)
-    with path.open(encoding="utf-8") as f:
-        if path.suffix.lower() == ".jsonl":
-            return [json.loads(line) for line in f if line.strip()]
-        records = json.load(f)
+    if path.suffix.lower() == ".jsonl":
+        return load_jsonl(path)
+    with path.open(encoding="utf-8") as source:
+        records = json.load(source)
 
     if not isinstance(records, list):
         raise ValueError("Expected a list of JSON records")
@@ -179,10 +224,9 @@ def load_records(path):
 
 
 def prepare_file(input_path, output_path):
-    """Prepare output/file"""
+    """Convert an annotation file and write the accepted records and errors."""
     records = load_records(input_path)
     output_path = Path(output_path)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
     converted = []
     errors = []
 
@@ -195,28 +239,26 @@ def prepare_file(input_path, output_path):
     error_path = output_path.with_suffix(".errors.json")
     partial_path = output_path.with_suffix(".partial.jsonl")
 
-    # Choose the new output file
     new_output = partial_path if errors else output_path
 
-    with new_output.open("w", encoding="utf-8") as f:
-        for record in converted:
-            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    save_jsonl(converted, new_output)
 
-    # Remove the old dataset
     old_output = output_path if errors else partial_path
     if old_output.exists():
         old_output.unlink()
 
-    # Save error report
-    with error_path.open("w", encoding="utf-8") as f:
-        json.dump(errors, f, indent=2, ensure_ascii=False)
+    with error_path.open("w", encoding="utf-8") as error_file:
+        json.dump(errors, error_file, indent=2, ensure_ascii=False)
 
-    print("\n===== Dataset Preparation Results =====")
-    print(f"Total records: {len(records)}")
-    print(f"Successfully converted: {len(converted)}")
-    print(f"Rejected: {len(errors)}")
-    print(f"Output: {new_output}")
-    print(f"Error report: {error_path}")
+    print("\n" + format_table(
+        ("Records", "Count"),
+        (("Total", f"{len(records):,}"), ("Converted", f"{len(converted):,}"),
+         ("Rejected", f"{len(errors):,}")),
+        title="Dataset preparation results", right=(1,),
+    ))
+    print("\n" + format_table(
+        ("File", "Path"), (("Dataset", new_output), ("Error report", error_path)), wrap=1,
+    ))
 
     if errors:
         print("\nPartial dataset generated. Review rejected records before training.")
@@ -225,10 +267,10 @@ def prepare_file(input_path, output_path):
 
 
 def inspect_failed_records(raw_path, error_path, limit=10):
-    """Debugging Helper Function"""
+    """Print a categorized sample of records rejected during conversion."""
     records = load_records(raw_path)
-    with open(error_path, encoding="utf-8") as f:
-        errors = json.load(f)
+    with open(error_path, encoding="utf-8") as error_file:
+        errors = json.load(error_file)
 
     if not errors:
         print("No failed records in the latest report.")
@@ -246,71 +288,60 @@ def inspect_failed_records(raw_path, error_path, limit=10):
         else:
             categories["Other"] += 1
 
-    print("\n=== Error Categories ===")
-    for category, count in categories.items():
-        print(f"{category}: {count}")
+    print("\n" + format_table(
+        ("Error category", "Records"), categories.most_common(), title="Rejected records", right=(1,),
+    ))
 
-    print("\n=== Failed Record Details ===")
-    for error in errors[:limit]:
-        record = records[error["index"]]
-        print(f"\nIndex: {error['index']}")
-        print("Error:", error["error"])
-        if not isinstance(record, dict) or not isinstance(record.get("text"), str):
-            print("Record:", record)
-            continue
-
-        text = record["text"]
-        print("Text:", repr(text))
-        for field in ("acronyms", "long-forms"):
-            print(f"\n{field}:")
-            try:
-                spans = get_spans(record, field)
-            except ValueError as error:
-                print(error)
-                continue
-
-            for start, end in spans:
-                print(f"  [{start}, {end}]: {text[start:end]!r}")
-                print("  Context:", repr(text[max(0, start - 15):end + 15]))
-
-
-def choose_dataset(raw_dir):
-    files = sorted(
-        file for file in raw_dir.rglob("*")
-        if file.is_file() and file.suffix.lower() in (".json", ".jsonl")
-    )
-    if not files:
-        print(f"No datasets found in {raw_dir}")
-        return None
-
-    print("\nAvailable datasets:\n")
-    for i, file in enumerate(files, start=1):
-        print(f"[{i}] {file.relative_to(raw_dir)}")
-    print("[0] Back")
-
-    choice = input("\nSelect a dataset: ").strip()
-    if choice == "0":
-        return None
-    try:
-        index = int(choice) - 1
-    except ValueError:
-        print("Please enter a number.")
-        return None
-    if not 0 <= index < len(files):
-        print("Invalid selection.")
-        return None
-    return files[index]
+    shown = errors[:limit]
+    print(f"\nShowing {len(shown):,} of {len(errors):,} rejected records")
+    for failure in shown:
+        index = failure["index"]
+        record = records[index]
+        rows = [("Error", failure["error"])]
+        if isinstance(record, dict) and isinstance(record.get("text"), str):
+            text = record["text"]
+            rows.append(("Text", repr(text)))
+            for field in ("acronyms", "long-forms"):
+                try:
+                    spans = get_spans(record, field)
+                except ValueError as error:
+                    rows.append((field, str(error)))
+                    continue
+                for start, end in spans:
+                    context = text[max(0, start - 15):end + 15]
+                    rows.append((f"{field} [{start}, {end}]", f"{text[start:end]!r}\nContext: {context!r}"))
+        else:
+            rows.append(("Record", repr(record)))
+        print("\n" + format_table(("Field", "Value"), rows, title=f"Failed record {index}", wrap=1))
 
 
 def main():
-    # Find project root automatically
-    project_root = Path(__file__).resolve().parent.parent
-    raw_dir = project_root / "data" / "raw"
-    output_dir = project_root / "data" / "processed"
+    parser = argparse.ArgumentParser(description="Prepare span annotations as token-level BIO records.")
+    parser.add_argument("--input", type=Path, help="source JSON or JSONL, for non-interactive conversion")
+    parser.add_argument("--output", type=Path, help="destination JSONL for --input")
+    args = parser.parse_args()
+    if args.input or args.output:
+        if not args.input or not args.output:
+            parser.error("--input and --output must be supplied together")
+        if args.output.suffix.lower() != ".jsonl":
+            parser.error("--output must have a .jsonl extension")
+        destinations = (args.output, args.output.with_suffix(".partial.jsonl"),
+                        args.output.with_suffix(".errors.json"))
+        if args.input.resolve() in {path.resolve() for path in destinations}:
+            parser.error("the input must be separate from all output files")
+        try:
+            prepare_file(args.input, args.output)
+        except (ValueError, OSError) as error:
+            parser.error(str(error))
+        return
+
+    raw_dir = ROOT / "data" / "raw"
 
     while True:
-        print("\n===== NLP Dataset Tool =====")
-        print("[1] Prepare dataset\n[2] Inspect failed records\n[0] Exit")
+        print("\n" + format_table(
+            ("Option", "Action"), ((1, "Prepare dataset"), (2, "Inspect failed records"), (0, "Exit")),
+            title="NLP Dataset Tool", right=(0,),
+        ))
         action = input("\nChoose an action: ").strip()
         if action == "0":
             break
@@ -324,7 +355,7 @@ def main():
                 continue
 
             relative_path = input_path.relative_to(raw_dir)
-            output_path = (output_dir / relative_path).with_suffix(".jsonl")
+            output_path = (DATA_DIR / relative_path).with_suffix(".jsonl")
             error_path = output_path.with_suffix(".errors.json")
 
             if action == "1":

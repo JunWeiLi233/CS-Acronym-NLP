@@ -1,47 +1,33 @@
-"""Technique 1: rule-based definition extraction.
+"""Find parenthetical abbreviation definitions with Schwartz–Hearst matching.
 
-Re-implements the training-free algorithm of Schwartz & Hearst (2003) on
-tokenised sentences, plus our extension, document-level propagation.
-
-  1. Find candidates: "long form ( short form )" or "short form ( long form )".
-     The second pattern is used when the parentheses hold more than two words.
-     Text inside the parentheses is cut at the first ',' or ';'.
-  2. Filter short forms: at most two words, 2-10 characters, contains a
-     letter, starts with a letter or digit. Because B-AC is a single token in
-     our label scheme, a short form must also be exactly one token.
-  3. Limit the long-form window to min(|SF| + 5, |SF| * 2) words before the
-     short form (|SF| = number of characters). The window does not cross
-     another parenthesis.
-  4. Match right to left: every short-form character, in order, must match
-     a long-form character; the first one must start a word.
-  5. Reject long forms shorter than the short form or containing it as a word.
-
-Extension: once a short form is defined, later uses in the same document
-are labelled B-AC too (plural forms such as CNNs included).
-
-Optional extras (off by default, reported separately):
-  --glossary       also read "SF = long form" / "SF : long form" definitions,
-                   common in CS tables and legends (~12% of SDU long forms).
-                   The same character-matching rules are applied.
-  --with-detector  also label abbreviations that are never defined, using
-                   the heuristic detector from baseline.py.
-
-Usage:
-    python src/rule_based.py                          # dev split, with propagation
-    python src/rule_based.py --no-propagate           # plain Schwartz & Hearst
-    python src/rule_based.py --with-detector          # + undefined abbreviations
-    python src/rule_based.py --glossary --with-detector
-    python src/rule_based.py --split data/processed/test.jsonl --save-preds
-    python src/rule_based.py --compare                # all variants side by side
+The matcher works from right to left and requires the first character of the
+short form to start a word. Short forms occupy one token in our label scheme.
+The detector can also label later mentions within the same document.
 """
 
 import argparse
 from collections import defaultdict
 
 from baseline import detect_abbreviations
-from evaluate import dump_errors, evaluate, format_report, summary_row
-from utils import (OUTSIDE, RESULTS_DIR, doc_key, is_word, load_lexicon, load_split,
-                   save_jsonl, sh_match_tokens, strip_plural)
+from evaluate import (
+    SPAN_F1_HEADERS,
+    dump_errors,
+    evaluate,
+    format_report,
+    span_f1_values,
+)
+from terminal_table import format_table
+from utils import (
+    OUTSIDE,
+    RESULTS_DIR,
+    doc_key,
+    is_word,
+    load_lexicon,
+    load_split,
+    save_jsonl,
+    sh_match_tokens,
+    strip_plural,
+)
 
 MAX_PAREN_TOKENS = 15
 
@@ -100,53 +86,48 @@ def _accept(tokens, sf, lf_start, lf_end):
 
 
 def find_definitions(tokens):
-    """Schwartz & Hearst on one tokenised sentence.
+    """Find definitions in a tokenized sentence.
 
-    Returns a list of (short_form_index, (lf_start, lf_end)) token spans.
+    Each result contains the short-form index and a half-open long-form span.
     """
     pairs = []
-    for i, t in enumerate(tokens):
-        if t != "(":
+    for opening, token in enumerate(tokens):
+        if token != "(":
             continue
-        j = _closing_paren(tokens, i)
-        if j is None or j == i + 1:
+        closing = _closing_paren(tokens, opening)
+        if closing is None or closing == opening + 1:
             continue
-        inner_end = j
-        for k in range(i + 1, j):
-            if tokens[k] in (",", ";"):
-                inner_end = k
+        inner_end = closing
+        for index in range(opening + 1, closing):
+            if tokens[index] in (",", ";"):
+                inner_end = index
                 break
-        inner = tokens[i + 1:inner_end]
+        inner = tokens[opening + 1:inner_end]
         if not inner:
             continue
-        n_inner_words = sum(is_word(x) for x in inner)
 
-        if n_inner_words > 2:
+        if sum(is_word(token) for token in inner) > 2:
             # Pattern "short form ( long form )"
-            sf_idx = i - 1
-            if sf_idx < 0 or not valid_short_form([tokens[sf_idx]]):
+            short_index = opening - 1
+            if short_index < 0 or not valid_short_form([tokens[short_index]]):
                 continue
-            sf = tokens[sf_idx]
-            m = sh_match_tokens(sf, inner)
-            if m is None:
-                continue
-            lf_start, lf_end = _trim(tokens, i + 1 + m, inner_end)
+            window_start, window_end = opening + 1, inner_end
         else:
             # Pattern "long form ( short form )"
             if not valid_short_form(inner):
                 continue
-            sf_idx = i + 1
-            sf = tokens[sf_idx]
-            n = min(len(sf) + 5, len(sf) * 2)
-            w_start = _window_start(tokens, i, n)
-            window = tokens[w_start:i]
-            m = sh_match_tokens(sf, window)
-            if m is None:
-                continue
-            lf_start, lf_end = _trim(tokens, w_start + m, i)
+            short_index = opening + 1
+            short_length = len(tokens[short_index])
+            max_words = min(short_length + 5, 2 * short_length)
+            window_start, window_end = _window_start(tokens, opening, max_words), opening
 
-        if _accept(tokens, sf, lf_start, lf_end):
-            pairs.append((sf_idx, (lf_start, lf_end)))
+        short_form = tokens[short_index]
+        match_start = sh_match_tokens(short_form, tokens[window_start:window_end])
+        if match_start is None:
+            continue
+        long_start, long_end = _trim(tokens, window_start + match_start, window_end)
+        if _accept(tokens, short_form, long_start, long_end):
+            pairs.append((short_index, (long_start, long_end)))
     return pairs
 
 
@@ -209,36 +190,36 @@ def label_sentence(tokens, glossary=False):
 
 
 def propagate(records, predictions, scope="later"):
-    """Document-level propagation: label other uses of a defined short form
-    (and its plural / singular) as B-AC.
+    """Copy B-AC labels to other mentions of the same form within a document.
 
-    scope="later": only uses after the definition (as in the proposal).
-    scope="all":   every use in the document.
+    The first labeled mention sets the starting point for scope="later".
+    Scope "all" also reaches earlier mentions. Only B-O tokens are relabeled.
     """
-    by_doc = defaultdict(list)
-    for idx, rec in enumerate(records):
-        by_doc[doc_key(rec)].append(idx)
+    document_indices = defaultdict(list)
+    for index, record in enumerate(records):
+        document_indices[doc_key(record)].append(index)
 
-    out = [list(p) for p in predictions]
-    for idxs in by_doc.values():
-        # (record position, token position) of the first definition of each form
-        first_def = {}
-        for order, idx in enumerate(idxs):
-            toks, labs = records[idx]["tokens"], out[idx]
-            for k, (t, l) in enumerate(zip(toks, labs)):
-                if l == "B-AC" and t not in first_def:
-                    first_def[t] = (order, k)
-        forms = {}
-        for sf, pos in first_def.items():
-            for variant in {sf, strip_plural(sf), sf + "s"}:
-                if variant not in forms or pos < forms[variant]:
-                    forms[variant] = pos
-        for order, idx in enumerate(idxs):
-            toks, labs = records[idx]["tokens"], out[idx]
-            for k, t in enumerate(toks):
-                if labs[k] == OUTSIDE and t in forms and (scope == "all" or (order, k) > forms[t]):
-                    labs[k] = "B-AC"
-    return out
+    propagated = [list(labels) for labels in predictions]
+    for indices in document_indices.values():
+        first_mention = {}
+        for sentence_index in indices:
+            tokens = records[sentence_index]["tokens"]
+            for token_index, (token, label) in enumerate(zip(tokens, propagated[sentence_index])):
+                if label == "B-AC":
+                    for form in (token, strip_plural(token), token + "s"):
+                        first_mention.setdefault(form, (sentence_index, token_index))
+
+        for sentence_index in indices:
+            labels = propagated[sentence_index]
+            for token_index, token in enumerate(records[sentence_index]["tokens"]):
+                first = first_mention.get(token)
+                if (
+                    labels[token_index] == OUTSIDE
+                    and first is not None
+                    and (scope == "all" or (sentence_index, token_index) > first)
+                ):
+                    labels[token_index] = "B-AC"
+    return propagated
 
 
 def predict(records, propagation="later", with_detector=False, glossary=False, lexicon=None):
@@ -273,16 +254,23 @@ def main():
 
     if args.compare:
         variants = [
-            ("S&H", dict(propagation=None)),
-            ("S&H + propagation", dict(propagation="later")),
-            ("S&H + propagation(all)", dict(propagation="all")),
-            ("S&H + propagation + detector", dict(propagation="later", with_detector=True)),
-            ("S&H + propagation + glossary", dict(propagation="later", glossary=True)),
-            ("S&H + prop. + glossary + detector", dict(propagation="later", glossary=True, with_detector=True)),
+            ("S&H", {"propagation": None}),
+            ("S&H + propagation", {"propagation": "later"}),
+            ("S&H + propagation(all)", {"propagation": "all"}),
+            ("S&H + propagation + detector", {"propagation": "later", "with_detector": True}),
+            ("S&H + propagation + glossary", {"propagation": "later", "glossary": True}),
+            (
+                "S&H + prop. + glossary + detector",
+                {"propagation": "later", "glossary": True, "with_detector": True},
+            ),
         ]
-        print(f"\n{'system':34}{'AC F1':>8}{'LF F1':>8}{'Pair F1':>8}")
-        for name, kw in variants:
-            print(summary_row(name, evaluate(records, predict(records, **kw))))
+        rows = ((name, *span_f1_values(evaluate(records, predict(records, **kw))))
+                for name, kw in variants)
+        print(format_table(
+            ("Variant", *SPAN_F1_HEADERS), rows,
+            title=f"Rule-based comparison on {args.split} ({len(records):,} sentences)",
+            right=range(1, 4), wrap=0,
+        ))
         return
 
     propagation = None if args.no_propagate else args.propagate_scope

@@ -1,13 +1,7 @@
-"""Part-of-speech tags from spaCy for the CRF "pos" feature group.
+"""Tag the project's tokens using spaCy so POS tags align with BIO labels.
 
-spaCy is optional. If it (or the en_core_web_sm model) is not installed,
-get_pos_tags returns None and the CRF trains without POS features.
-
-    pip install spacy
-    python -m spacy download en_core_web_sm
-
-Tags are computed on our own tokens (so they line up with the labels) and
-cached in data/processed/pos_cache.json, keyed by sentence text.
+The CRF can omit POS features when spaCy or en_core_web_sm is unavailable.
+The cache in data/processed/pos_cache.json is keyed by token sequence.
 """
 
 import hashlib
@@ -36,12 +30,8 @@ def _key(tokens):
     return hashlib.md5("\u0001".join(tokens).encode("utf-8")).hexdigest()
 
 
-def spacy_available():
-    return bool(_load_spacy())
-
-
 def get_pos_tags(token_lists, use_cache=True):
-    """Return a list of (pos, tag) list pairs aligned with token_lists, or None."""
+    """Return coarse and fine POS tags for each sentence, or None without spaCy."""
     nlp = _load_spacy()
     if not nlp:
         return None
@@ -49,15 +39,15 @@ def get_pos_tags(token_lists, use_cache=True):
 
     cache = {}
     if use_cache and CACHE_PATH.exists():
-        with open(CACHE_PATH, encoding="utf-8") as f:
-            cache = json.load(f)
-    todo = [toks for toks in token_lists if _key(toks) not in cache]
-    if todo:
-        docs = (Doc(nlp.vocab, words=list(toks)) for toks in todo)
-        for toks, doc in zip(todo, nlp.pipe(docs, batch_size=256)):
-            cache[_key(toks)] = [[t.pos_ for t in doc], [t.tag_ for t in doc]]
+        with CACHE_PATH.open(encoding="utf-8") as cache_file:
+            cache = json.load(cache_file)
+    uncached = [tokens for tokens in token_lists if _key(tokens) not in cache]
+    if uncached:
+        docs = (Doc(nlp.vocab, words=list(tokens)) for tokens in uncached)
+        for tokens, doc in zip(uncached, nlp.pipe(docs, batch_size=256)):
+            cache[_key(tokens)] = [[token.pos_ for token in doc], [token.tag_ for token in doc]]
         if use_cache:
             CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
-            with open(CACHE_PATH, "w", encoding="utf-8") as f:
-                json.dump(cache, f)
-    return [tuple(cache[_key(toks)]) for toks in token_lists]
+            with CACHE_PATH.open("w", encoding="utf-8") as cache_file:
+                json.dump(cache, cache_file)
+    return [tuple(cache[_key(tokens)]) for tokens in token_lists]

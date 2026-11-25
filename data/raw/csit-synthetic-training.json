@@ -1,0 +1,4961 @@
+[
+  {
+    "id": "kaggle-csit-v1-BGP-forward",
+    "text": "In the section on network design, the authors introduce Border Gateway Protocol (BGP).",
+    "acronyms": [
+      [
+        81,
+        84
+      ]
+    ],
+    "long-forms": [
+      [
+        56,
+        79
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-BGP-alternate",
+    "text": "The guide lists BGP (Border Gateway Protocol) as a term to know when studying network design.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        21,
+        44
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-BGP-unexpanded",
+    "text": "The authors discuss BGP in the section on network design.",
+    "acronyms": [
+      [
+        20,
+        23
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-BGP-unmarked",
+    "text": "The design notes discuss Border Gateway Protocol in the context of network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CDN-forward",
+    "text": "The workshop on network design begins with an example of Content Delivery Network (CDN).",
+    "acronyms": [
+      [
+        83,
+        86
+      ]
+    ],
+    "long-forms": [
+      [
+        57,
+        81
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CDN-alternate",
+    "text": "For the discussion of network design, the authors define CDN as Content Delivery Network.",
+    "acronyms": [
+      [
+        57,
+        60
+      ]
+    ],
+    "long-forms": [
+      [
+        64,
+        88
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CDN-unexpanded",
+    "text": "For further reading on network design, the handout points to a case study involving CDN.",
+    "acronyms": [
+      [
+        84,
+        87
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CDN-unmarked",
+    "text": "The case study on network design concludes with a discussion of Content Delivery Network.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CIDR-forward",
+    "text": "Classless Inter-Domain Routing (CIDR) appears in the design notes for network design.",
+    "acronyms": [
+      [
+        32,
+        36
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        30
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CIDR-alternate",
+    "text": "The glossary for the chapter on network design lists CIDR = Classless Inter-Domain Routing.",
+    "acronyms": [
+      [
+        53,
+        57
+      ]
+    ],
+    "long-forms": [
+      [
+        60,
+        90
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CIDR-unexpanded",
+    "text": "The report includes a diagram for CIDR in the appendix on network design.",
+    "acronyms": [
+      [
+        34,
+        38
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CIDR-unmarked",
+    "text": "The lecture on network design covers Classless Inter-Domain Routing in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CORS-forward",
+    "text": "For readers new to network design, the appendix explains Cross-Origin Resource Sharing (CORS) in more detail.",
+    "acronyms": [
+      [
+        88,
+        92
+      ]
+    ],
+    "long-forms": [
+      [
+        57,
+        86
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CORS-alternate",
+    "text": "The report uses CORS, short for Cross-Origin Resource Sharing, in the section on network design.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        32,
+        61
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CORS-unexpanded",
+    "text": "The discussion of network design ends with an example involving CORS.",
+    "acronyms": [
+      [
+        64,
+        68
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CORS-unmarked",
+    "text": "The report mentions Cross-Origin Resource Sharing in the related work section on network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DHCP-forward",
+    "text": "The prototype documentation mentions Dynamic Host Configuration Protocol (DHCP) in the discussion of network design.",
+    "acronyms": [
+      [
+        74,
+        78
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        72
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DHCP-alternate",
+    "text": "The paper refers to Dynamic Host Configuration Protocol as DHCP in its discussion of network design.",
+    "acronyms": [
+      [
+        59,
+        63
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        55
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DHCP-unexpanded",
+    "text": "DHCP is covered in the background material on network design.",
+    "acronyms": [
+      [
+        0,
+        4
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DHCP-unmarked",
+    "text": "The reading list for network design includes a chapter devoted to Dynamic Host Configuration Protocol.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DNS-forward",
+    "text": "An exercise on network design asks students to explain Domain Name System (DNS) with an example.",
+    "acronyms": [
+      [
+        75,
+        78
+      ]
+    ],
+    "long-forms": [
+      [
+        55,
+        73
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DNS-alternate",
+    "text": "The tutorial on network design uses DNS (Domain Name System) in the table below.",
+    "acronyms": [
+      [
+        36,
+        39
+      ]
+    ],
+    "long-forms": [
+      [
+        41,
+        59
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DNS-unexpanded",
+    "text": "The next chapter revisits DNS after introducing network design.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DNS-unmarked",
+    "text": "Domain Name System appears in the appendix to the chapter on network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-FTP-forward",
+    "text": "In the section on network design, the authors introduce File Transfer Protocol (FTP).",
+    "acronyms": [
+      [
+        80,
+        83
+      ]
+    ],
+    "long-forms": [
+      [
+        56,
+        78
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-FTP-alternate",
+    "text": "The guide lists FTP (File Transfer Protocol) as a term to know when studying network design.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        21,
+        43
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-FTP-unexpanded",
+    "text": "The authors discuss FTP in the section on network design.",
+    "acronyms": [
+      [
+        20,
+        23
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-FTP-unmarked",
+    "text": "The design notes discuss File Transfer Protocol in the context of network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-HTTP-forward",
+    "text": "The workshop on network design begins with an example of Hypertext Transfer Protocol (HTTP).",
+    "acronyms": [
+      [
+        86,
+        90
+      ]
+    ],
+    "long-forms": [
+      [
+        57,
+        84
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-HTTP-alternate",
+    "text": "For the discussion of network design, the authors define HTTP as Hypertext Transfer Protocol.",
+    "acronyms": [
+      [
+        57,
+        61
+      ]
+    ],
+    "long-forms": [
+      [
+        65,
+        92
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-HTTP-unexpanded",
+    "text": "For further reading on network design, the handout points to a case study involving HTTP.",
+    "acronyms": [
+      [
+        84,
+        88
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-HTTP-unmarked",
+    "text": "The case study on network design concludes with a discussion of Hypertext Transfer Protocol.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ICMP-forward",
+    "text": "Internet Control Message Protocol (ICMP) appears in the design notes for network design.",
+    "acronyms": [
+      [
+        35,
+        39
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        33
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ICMP-alternate",
+    "text": "The glossary for the chapter on network design lists ICMP = Internet Control Message Protocol.",
+    "acronyms": [
+      [
+        53,
+        57
+      ]
+    ],
+    "long-forms": [
+      [
+        60,
+        93
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ICMP-unexpanded",
+    "text": "The report includes a diagram for ICMP in the appendix on network design.",
+    "acronyms": [
+      [
+        34,
+        38
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ICMP-unmarked",
+    "text": "The lecture on network design covers Internet Control Message Protocol in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IMAP-forward",
+    "text": "For readers new to network design, the appendix explains Internet Message Access Protocol (IMAP) in more detail.",
+    "acronyms": [
+      [
+        91,
+        95
+      ]
+    ],
+    "long-forms": [
+      [
+        57,
+        89
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IMAP-alternate",
+    "text": "The report uses IMAP, short for Internet Message Access Protocol, in the section on network design.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        32,
+        64
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IMAP-unexpanded",
+    "text": "The discussion of network design ends with an example involving IMAP.",
+    "acronyms": [
+      [
+        64,
+        68
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IMAP-unmarked",
+    "text": "The report mentions Internet Message Access Protocol in the related work section on network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPv4-forward",
+    "text": "The prototype documentation mentions Internet Protocol version 4 (IPv4) in the discussion of network design.",
+    "acronyms": [
+      [
+        66,
+        70
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        64
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPv4-alternate",
+    "text": "The paper refers to Internet Protocol version 4 as IPv4 in its discussion of network design.",
+    "acronyms": [
+      [
+        51,
+        55
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        47
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPv4-unexpanded",
+    "text": "IPv4 is covered in the background material on network design.",
+    "acronyms": [
+      [
+        0,
+        4
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPv4-unmarked",
+    "text": "The reading list for network design includes a chapter devoted to Internet Protocol version 4.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPv6-forward",
+    "text": "An exercise on network design asks students to explain Internet Protocol version 6 (IPv6) with an example.",
+    "acronyms": [
+      [
+        84,
+        88
+      ]
+    ],
+    "long-forms": [
+      [
+        55,
+        82
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPv6-alternate",
+    "text": "The tutorial on network design uses IPv6 (Internet Protocol version 6) in the table below.",
+    "acronyms": [
+      [
+        36,
+        40
+      ]
+    ],
+    "long-forms": [
+      [
+        42,
+        69
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPv6-unexpanded",
+    "text": "The next chapter revisits IPv6 after introducing network design.",
+    "acronyms": [
+      [
+        26,
+        30
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPv6-unmarked",
+    "text": "Internet Protocol version 6 appears in the appendix to the chapter on network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LAN-forward",
+    "text": "In the section on network design, the authors introduce Local Area Network (LAN).",
+    "acronyms": [
+      [
+        76,
+        79
+      ]
+    ],
+    "long-forms": [
+      [
+        56,
+        74
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LAN-alternate",
+    "text": "The guide lists LAN (Local Area Network) as a term to know when studying network design.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        21,
+        39
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LAN-unexpanded",
+    "text": "The authors discuss LAN in the section on network design.",
+    "acronyms": [
+      [
+        20,
+        23
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LAN-unmarked",
+    "text": "The design notes discuss Local Area Network in the context of network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NAT-forward",
+    "text": "The workshop on network design begins with an example of Network Address Translation (NAT).",
+    "acronyms": [
+      [
+        86,
+        89
+      ]
+    ],
+    "long-forms": [
+      [
+        57,
+        84
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NAT-alternate",
+    "text": "For the discussion of network design, the authors define NAT as Network Address Translation.",
+    "acronyms": [
+      [
+        57,
+        60
+      ]
+    ],
+    "long-forms": [
+      [
+        64,
+        91
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NAT-unexpanded",
+    "text": "For further reading on network design, the handout points to a case study involving NAT.",
+    "acronyms": [
+      [
+        84,
+        87
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NAT-unmarked",
+    "text": "The case study on network design concludes with a discussion of Network Address Translation.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NTP-forward",
+    "text": "Network Time Protocol (NTP) appears in the design notes for network design.",
+    "acronyms": [
+      [
+        23,
+        26
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        21
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NTP-alternate",
+    "text": "The glossary for the chapter on network design lists NTP = Network Time Protocol.",
+    "acronyms": [
+      [
+        53,
+        56
+      ]
+    ],
+    "long-forms": [
+      [
+        59,
+        80
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NTP-unexpanded",
+    "text": "The report includes a diagram for NTP in the appendix on network design.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NTP-unmarked",
+    "text": "The lecture on network design covers Network Time Protocol in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SMTP-forward",
+    "text": "For readers new to network design, the appendix explains Simple Mail Transfer Protocol (SMTP) in more detail.",
+    "acronyms": [
+      [
+        88,
+        92
+      ]
+    ],
+    "long-forms": [
+      [
+        57,
+        86
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SMTP-alternate",
+    "text": "The report uses SMTP, short for Simple Mail Transfer Protocol, in the section on network design.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        32,
+        61
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SMTP-unexpanded",
+    "text": "The discussion of network design ends with an example involving SMTP.",
+    "acronyms": [
+      [
+        64,
+        68
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SMTP-unmarked",
+    "text": "The report mentions Simple Mail Transfer Protocol in the related work section on network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SNMP-forward",
+    "text": "The prototype documentation mentions Simple Network Management Protocol (SNMP) in the discussion of network design.",
+    "acronyms": [
+      [
+        73,
+        77
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        71
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SNMP-alternate",
+    "text": "The paper refers to Simple Network Management Protocol as SNMP in its discussion of network design.",
+    "acronyms": [
+      [
+        58,
+        62
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        54
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SNMP-unexpanded",
+    "text": "SNMP is covered in the background material on network design.",
+    "acronyms": [
+      [
+        0,
+        4
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SNMP-unmarked",
+    "text": "The reading list for network design includes a chapter devoted to Simple Network Management Protocol.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TCP-forward",
+    "text": "An exercise on network design asks students to explain Transmission Control Protocol (TCP) with an example.",
+    "acronyms": [
+      [
+        86,
+        89
+      ]
+    ],
+    "long-forms": [
+      [
+        55,
+        84
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TCP-alternate",
+    "text": "The tutorial on network design uses TCP (Transmission Control Protocol) in the table below.",
+    "acronyms": [
+      [
+        36,
+        39
+      ]
+    ],
+    "long-forms": [
+      [
+        41,
+        70
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TCP-unexpanded",
+    "text": "The next chapter revisits TCP after introducing network design.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TCP-unmarked",
+    "text": "Transmission Control Protocol appears in the appendix to the chapter on network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UDP-forward",
+    "text": "In the section on network design, the authors introduce User Datagram Protocol (UDP).",
+    "acronyms": [
+      [
+        80,
+        83
+      ]
+    ],
+    "long-forms": [
+      [
+        56,
+        78
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UDP-alternate",
+    "text": "The guide lists UDP (User Datagram Protocol) as a term to know when studying network design.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        21,
+        43
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UDP-unexpanded",
+    "text": "The authors discuss UDP in the section on network design.",
+    "acronyms": [
+      [
+        20,
+        23
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UDP-unmarked",
+    "text": "The design notes discuss User Datagram Protocol in the context of network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-URI-forward",
+    "text": "The workshop on network design begins with an example of Uniform Resource Identifier (URI).",
+    "acronyms": [
+      [
+        86,
+        89
+      ]
+    ],
+    "long-forms": [
+      [
+        57,
+        84
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-URI-alternate",
+    "text": "For the discussion of network design, the authors define URI as Uniform Resource Identifier.",
+    "acronyms": [
+      [
+        57,
+        60
+      ]
+    ],
+    "long-forms": [
+      [
+        64,
+        91
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-URI-unexpanded",
+    "text": "For further reading on network design, the handout points to a case study involving URI.",
+    "acronyms": [
+      [
+        84,
+        87
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-URI-unmarked",
+    "text": "The case study on network design concludes with a discussion of Uniform Resource Identifier.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-URL-forward",
+    "text": "Uniform Resource Locator (URL) appears in the design notes for network design.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        24
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-URL-alternate",
+    "text": "The glossary for the chapter on network design lists URL = Uniform Resource Locator.",
+    "acronyms": [
+      [
+        53,
+        56
+      ]
+    ],
+    "long-forms": [
+      [
+        59,
+        83
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-URL-unexpanded",
+    "text": "The report includes a diagram for URL in the appendix on network design.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-URL-unmarked",
+    "text": "The lecture on network design covers Uniform Resource Locator in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-VLAN-forward",
+    "text": "For readers new to network design, the appendix explains Virtual Local Area Network (VLAN) in more detail.",
+    "acronyms": [
+      [
+        85,
+        89
+      ]
+    ],
+    "long-forms": [
+      [
+        57,
+        83
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-VLAN-alternate",
+    "text": "The report uses VLAN, short for Virtual Local Area Network, in the section on network design.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        32,
+        58
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-VLAN-unexpanded",
+    "text": "The discussion of network design ends with an example involving VLAN.",
+    "acronyms": [
+      [
+        64,
+        68
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-VLAN-unmarked",
+    "text": "The report mentions Virtual Local Area Network in the related work section on network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-VPN-forward",
+    "text": "The prototype documentation mentions Virtual Private Network (VPN) in the discussion of network design.",
+    "acronyms": [
+      [
+        62,
+        65
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        60
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-VPN-alternate",
+    "text": "The paper refers to Virtual Private Network as VPN in its discussion of network design.",
+    "acronyms": [
+      [
+        47,
+        50
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        43
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-VPN-unexpanded",
+    "text": "VPN is covered in the background material on network design.",
+    "acronyms": [
+      [
+        0,
+        3
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-VPN-unmarked",
+    "text": "The reading list for network design includes a chapter devoted to Virtual Private Network.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-WAN-forward",
+    "text": "An exercise on network design asks students to explain Wide Area Network (WAN) with an example.",
+    "acronyms": [
+      [
+        74,
+        77
+      ]
+    ],
+    "long-forms": [
+      [
+        55,
+        72
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-WAN-alternate",
+    "text": "The tutorial on network design uses WAN (Wide Area Network) in the table below.",
+    "acronyms": [
+      [
+        36,
+        39
+      ]
+    ],
+    "long-forms": [
+      [
+        41,
+        58
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-WAN-unexpanded",
+    "text": "The next chapter revisits WAN after introducing network design.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-WAN-unmarked",
+    "text": "Wide Area Network appears in the appendix to the chapter on network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-WLAN-forward",
+    "text": "In the section on network design, the authors introduce Wireless Local Area Network (WLAN).",
+    "acronyms": [
+      [
+        85,
+        89
+      ]
+    ],
+    "long-forms": [
+      [
+        56,
+        83
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-WLAN-alternate",
+    "text": "The guide lists WLAN (Wireless Local Area Network) as a term to know when studying network design.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        22,
+        49
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-WLAN-unexpanded",
+    "text": "The authors discuss WLAN in the section on network design.",
+    "acronyms": [
+      [
+        20,
+        24
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-WLAN-unmarked",
+    "text": "The design notes discuss Wireless Local Area Network in the context of network design.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-API-forward",
+    "text": "The workshop on software development begins with an example of Application Programming Interface (API).",
+    "acronyms": [
+      [
+        98,
+        101
+      ]
+    ],
+    "long-forms": [
+      [
+        63,
+        96
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-API-alternate",
+    "text": "For the discussion of software development, the authors define API as Application Programming Interface.",
+    "acronyms": [
+      [
+        63,
+        66
+      ]
+    ],
+    "long-forms": [
+      [
+        70,
+        103
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-API-unexpanded",
+    "text": "For further reading on software development, the handout points to a case study involving API.",
+    "acronyms": [
+      [
+        90,
+        93
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-API-unmarked",
+    "text": "The case study on software development concludes with a discussion of Application Programming Interface.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-BSD-forward",
+    "text": "Berkeley Software Distribution (BSD) appears in the design notes for software development.",
+    "acronyms": [
+      [
+        32,
+        35
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        30
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-BSD-alternate",
+    "text": "The glossary for the chapter on software development lists BSD = Berkeley Software Distribution.",
+    "acronyms": [
+      [
+        59,
+        62
+      ]
+    ],
+    "long-forms": [
+      [
+        65,
+        95
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-BSD-unexpanded",
+    "text": "The report includes a diagram for BSD in the appendix on software development.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-BSD-unmarked",
+    "text": "The lecture on software development covers Berkeley Software Distribution in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CLI-forward",
+    "text": "For readers new to software development, the appendix explains Command Line Interface (CLI) in more detail.",
+    "acronyms": [
+      [
+        87,
+        90
+      ]
+    ],
+    "long-forms": [
+      [
+        63,
+        85
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CLI-alternate",
+    "text": "The report uses CLI, short for Command Line Interface, in the section on software development.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        31,
+        53
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CLI-unexpanded",
+    "text": "The discussion of software development ends with an example involving CLI.",
+    "acronyms": [
+      [
+        70,
+        73
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CLI-unmarked",
+    "text": "The report mentions Command Line Interface in the related work section on software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CRUD-forward",
+    "text": "The prototype documentation mentions Create, Read, Update and Delete (CRUD) in the discussion of software development.",
+    "acronyms": [
+      [
+        70,
+        74
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        68
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CRUD-alternate",
+    "text": "The paper refers to Create, Read, Update and Delete as CRUD in its discussion of software development.",
+    "acronyms": [
+      [
+        55,
+        59
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        51
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CRUD-unexpanded",
+    "text": "CRUD is covered in the background material on software development.",
+    "acronyms": [
+      [
+        0,
+        4
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CRUD-unmarked",
+    "text": "The reading list for software development includes a chapter devoted to Create, Read, Update and Delete.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CSV-forward",
+    "text": "An exercise on software development asks students to explain Comma-Separated Values (CSV) with an example.",
+    "acronyms": [
+      [
+        85,
+        88
+      ]
+    ],
+    "long-forms": [
+      [
+        61,
+        83
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CSV-alternate",
+    "text": "The tutorial on software development uses CSV (Comma-Separated Values) in the table below.",
+    "acronyms": [
+      [
+        42,
+        45
+      ]
+    ],
+    "long-forms": [
+      [
+        47,
+        69
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CSV-unexpanded",
+    "text": "The next chapter revisits CSV after introducing software development.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CSV-unmarked",
+    "text": "Comma-Separated Values appears in the appendix to the chapter on software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DOM-forward",
+    "text": "In the section on software development, the authors introduce Document Object Model (DOM).",
+    "acronyms": [
+      [
+        85,
+        88
+      ]
+    ],
+    "long-forms": [
+      [
+        62,
+        83
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DOM-alternate",
+    "text": "The guide lists DOM (Document Object Model) as a term to know when studying software development.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        21,
+        42
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DOM-unexpanded",
+    "text": "The authors discuss DOM in the section on software development.",
+    "acronyms": [
+      [
+        20,
+        23
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DOM-unmarked",
+    "text": "The design notes discuss Document Object Model in the context of software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-EOF-forward",
+    "text": "The workshop on software development begins with an example of End of File (EOF).",
+    "acronyms": [
+      [
+        76,
+        79
+      ]
+    ],
+    "long-forms": [
+      [
+        63,
+        74
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-EOF-alternate",
+    "text": "For the discussion of software development, the authors define EOF as End of File.",
+    "acronyms": [
+      [
+        63,
+        66
+      ]
+    ],
+    "long-forms": [
+      [
+        70,
+        81
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-EOF-unexpanded",
+    "text": "For further reading on software development, the handout points to a case study involving EOF.",
+    "acronyms": [
+      [
+        90,
+        93
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-EOF-unmarked",
+    "text": "The case study on software development concludes with a discussion of End of File.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GUI-forward",
+    "text": "Graphical User Interface (GUI) appears in the design notes for software development.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        24
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GUI-alternate",
+    "text": "The glossary for the chapter on software development lists GUI = Graphical User Interface.",
+    "acronyms": [
+      [
+        59,
+        62
+      ]
+    ],
+    "long-forms": [
+      [
+        65,
+        89
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GUI-unexpanded",
+    "text": "The report includes a diagram for GUI in the appendix on software development.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GUI-unmarked",
+    "text": "The lecture on software development covers Graphical User Interface in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-HTML-forward",
+    "text": "For readers new to software development, the appendix explains Hypertext Markup Language (HTML) in more detail.",
+    "acronyms": [
+      [
+        90,
+        94
+      ]
+    ],
+    "long-forms": [
+      [
+        63,
+        88
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-HTML-alternate",
+    "text": "The report uses HTML, short for Hypertext Markup Language, in the section on software development.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        32,
+        57
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-HTML-unexpanded",
+    "text": "The discussion of software development ends with an example involving HTML.",
+    "acronyms": [
+      [
+        70,
+        74
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-HTML-unmarked",
+    "text": "The report mentions Hypertext Markup Language in the related work section on software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPC-forward",
+    "text": "The prototype documentation mentions Inter-Process Communication (IPC) in the discussion of software development.",
+    "acronyms": [
+      [
+        66,
+        69
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        64
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPC-alternate",
+    "text": "The paper refers to Inter-Process Communication as IPC in its discussion of software development.",
+    "acronyms": [
+      [
+        51,
+        54
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        47
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPC-unexpanded",
+    "text": "IPC is covered in the background material on software development.",
+    "acronyms": [
+      [
+        0,
+        3
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-IPC-unmarked",
+    "text": "The reading list for software development includes a chapter devoted to Inter-Process Communication.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JIT-forward",
+    "text": "An exercise on software development asks students to explain Just-In-Time (JIT) with an example.",
+    "acronyms": [
+      [
+        75,
+        78
+      ]
+    ],
+    "long-forms": [
+      [
+        61,
+        73
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JIT-alternate",
+    "text": "The tutorial on software development uses JIT (Just-In-Time) in the table below.",
+    "acronyms": [
+      [
+        42,
+        45
+      ]
+    ],
+    "long-forms": [
+      [
+        47,
+        59
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JIT-unexpanded",
+    "text": "The next chapter revisits JIT after introducing software development.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JIT-unmarked",
+    "text": "Just-In-Time appears in the appendix to the chapter on software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JSON-forward",
+    "text": "In the section on software development, the authors introduce JavaScript Object Notation (JSON).",
+    "acronyms": [
+      [
+        90,
+        94
+      ]
+    ],
+    "long-forms": [
+      [
+        62,
+        88
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JSON-alternate",
+    "text": "The guide lists JSON (JavaScript Object Notation) as a term to know when studying software development.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        22,
+        48
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JSON-unexpanded",
+    "text": "The authors discuss JSON in the section on software development.",
+    "acronyms": [
+      [
+        20,
+        24
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JSON-unmarked",
+    "text": "The design notes discuss JavaScript Object Notation in the context of software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JVM-forward",
+    "text": "The workshop on software development begins with an example of Java Virtual Machine (JVM).",
+    "acronyms": [
+      [
+        85,
+        88
+      ]
+    ],
+    "long-forms": [
+      [
+        63,
+        83
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JVM-alternate",
+    "text": "For the discussion of software development, the authors define JVM as Java Virtual Machine.",
+    "acronyms": [
+      [
+        63,
+        66
+      ]
+    ],
+    "long-forms": [
+      [
+        70,
+        90
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JVM-unexpanded",
+    "text": "For further reading on software development, the handout points to a case study involving JVM.",
+    "acronyms": [
+      [
+        90,
+        93
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JVM-unmarked",
+    "text": "The case study on software development concludes with a discussion of Java Virtual Machine.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MVC-forward",
+    "text": "Model-View-Controller (MVC) appears in the design notes for software development.",
+    "acronyms": [
+      [
+        23,
+        26
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        21
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MVC-alternate",
+    "text": "The glossary for the chapter on software development lists MVC = Model-View-Controller.",
+    "acronyms": [
+      [
+        59,
+        62
+      ]
+    ],
+    "long-forms": [
+      [
+        65,
+        86
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MVC-unexpanded",
+    "text": "The report includes a diagram for MVC in the appendix on software development.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MVC-unmarked",
+    "text": "The lecture on software development covers Model-View-Controller in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OOP-forward",
+    "text": "For readers new to software development, the appendix explains Object-Oriented Programming (OOP) in more detail.",
+    "acronyms": [
+      [
+        92,
+        95
+      ]
+    ],
+    "long-forms": [
+      [
+        63,
+        90
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OOP-alternate",
+    "text": "The report uses OOP, short for Object-Oriented Programming, in the section on software development.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        31,
+        58
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OOP-unexpanded",
+    "text": "The discussion of software development ends with an example involving OOP.",
+    "acronyms": [
+      [
+        70,
+        73
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OOP-unmarked",
+    "text": "The report mentions Object-Oriented Programming in the related work section on software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OS-forward",
+    "text": "The prototype documentation mentions Operating System (OS) in the discussion of software development.",
+    "acronyms": [
+      [
+        55,
+        57
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        53
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OS-alternate",
+    "text": "The paper refers to Operating System as OS in its discussion of software development.",
+    "acronyms": [
+      [
+        40,
+        42
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        36
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OS-unexpanded",
+    "text": "OS is covered in the background material on software development.",
+    "acronyms": [
+      [
+        0,
+        2
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OS-unmarked",
+    "text": "The reading list for software development includes a chapter devoted to Operating System.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PDF-forward",
+    "text": "An exercise on software development asks students to explain Portable Document Format (PDF) with an example.",
+    "acronyms": [
+      [
+        87,
+        90
+      ]
+    ],
+    "long-forms": [
+      [
+        61,
+        85
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PDF-alternate",
+    "text": "The tutorial on software development uses PDF (Portable Document Format) in the table below.",
+    "acronyms": [
+      [
+        42,
+        45
+      ]
+    ],
+    "long-forms": [
+      [
+        47,
+        71
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PDF-unexpanded",
+    "text": "The next chapter revisits PDF after introducing software development.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PDF-unmarked",
+    "text": "Portable Document Format appears in the appendix to the chapter on software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RPC-forward",
+    "text": "In the section on software development, the authors introduce Remote Procedure Call (RPC).",
+    "acronyms": [
+      [
+        85,
+        88
+      ]
+    ],
+    "long-forms": [
+      [
+        62,
+        83
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RPC-alternate",
+    "text": "The guide lists RPC (Remote Procedure Call) as a term to know when studying software development.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        21,
+        42
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RPC-unexpanded",
+    "text": "The authors discuss RPC in the section on software development.",
+    "acronyms": [
+      [
+        20,
+        23
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RPC-unmarked",
+    "text": "The design notes discuss Remote Procedure Call in the context of software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SDK-forward",
+    "text": "The workshop on software development begins with an example of Software Development Kit (SDK).",
+    "acronyms": [
+      [
+        89,
+        92
+      ]
+    ],
+    "long-forms": [
+      [
+        63,
+        87
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SDK-alternate",
+    "text": "For the discussion of software development, the authors define SDK as Software Development Kit.",
+    "acronyms": [
+      [
+        63,
+        66
+      ]
+    ],
+    "long-forms": [
+      [
+        70,
+        94
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SDK-unexpanded",
+    "text": "For further reading on software development, the handout points to a case study involving SDK.",
+    "acronyms": [
+      [
+        90,
+        93
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SDK-unmarked",
+    "text": "The case study on software development concludes with a discussion of Software Development Kit.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UI-forward",
+    "text": "User Interface (UI) appears in the design notes for software development.",
+    "acronyms": [
+      [
+        16,
+        18
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        14
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UI-alternate",
+    "text": "The glossary for the chapter on software development lists UI = User Interface.",
+    "acronyms": [
+      [
+        59,
+        61
+      ]
+    ],
+    "long-forms": [
+      [
+        64,
+        78
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UI-unexpanded",
+    "text": "The report includes a diagram for UI in the appendix on software development.",
+    "acronyms": [
+      [
+        34,
+        36
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UI-unmarked",
+    "text": "The lecture on software development covers User Interface in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UTF-forward",
+    "text": "For readers new to software development, the appendix explains Unicode Transformation Format (UTF) in more detail.",
+    "acronyms": [
+      [
+        94,
+        97
+      ]
+    ],
+    "long-forms": [
+      [
+        63,
+        92
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UTF-alternate",
+    "text": "The report uses UTF, short for Unicode Transformation Format, in the section on software development.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        31,
+        60
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UTF-unexpanded",
+    "text": "The discussion of software development ends with an example involving UTF.",
+    "acronyms": [
+      [
+        70,
+        73
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-UTF-unmarked",
+    "text": "The report mentions Unicode Transformation Format in the related work section on software development.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-XML-forward",
+    "text": "The prototype documentation mentions eXtensible Markup Language (XML) in the discussion of software development.",
+    "acronyms": [
+      [
+        65,
+        68
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        63
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-XML-alternate",
+    "text": "The paper refers to eXtensible Markup Language as XML in its discussion of software development.",
+    "acronyms": [
+      [
+        50,
+        53
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        46
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-XML-unexpanded",
+    "text": "XML is covered in the background material on software development.",
+    "acronyms": [
+      [
+        0,
+        3
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-XML-unmarked",
+    "text": "The reading list for software development includes a chapter devoted to eXtensible Markup Language.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ALU-forward",
+    "text": "An exercise on computer hardware asks students to explain Arithmetic and Logical Unit (ALU) with an example.",
+    "acronyms": [
+      [
+        87,
+        90
+      ]
+    ],
+    "long-forms": [
+      [
+        58,
+        85
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ALU-alternate",
+    "text": "The tutorial on computer hardware uses ALU (Arithmetic and Logical Unit) in the table below.",
+    "acronyms": [
+      [
+        39,
+        42
+      ]
+    ],
+    "long-forms": [
+      [
+        44,
+        71
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ALU-unexpanded",
+    "text": "The next chapter revisits ALU after introducing computer hardware.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ALU-unmarked",
+    "text": "Arithmetic and Logical Unit appears in the appendix to the chapter on computer hardware.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ASIC-forward",
+    "text": "In the section on computer hardware, the authors introduce Application-Specific Integrated Circuit (ASIC).",
+    "acronyms": [
+      [
+        100,
+        104
+      ]
+    ],
+    "long-forms": [
+      [
+        59,
+        98
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ASIC-alternate",
+    "text": "The guide lists ASIC (Application-Specific Integrated Circuit) as a term to know when studying computer hardware.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        22,
+        61
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ASIC-unexpanded",
+    "text": "The authors discuss ASIC in the section on computer hardware.",
+    "acronyms": [
+      [
+        20,
+        24
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ASIC-unmarked",
+    "text": "The design notes discuss Application-Specific Integrated Circuit in the context of computer hardware.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CPU-forward",
+    "text": "The workshop on computer hardware begins with an example of Central Processing Unit (CPU).",
+    "acronyms": [
+      [
+        85,
+        88
+      ]
+    ],
+    "long-forms": [
+      [
+        60,
+        83
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CPU-alternate",
+    "text": "For the discussion of computer hardware, the authors define CPU as Central Processing Unit.",
+    "acronyms": [
+      [
+        60,
+        63
+      ]
+    ],
+    "long-forms": [
+      [
+        67,
+        90
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CPU-unexpanded",
+    "text": "For further reading on computer hardware, the handout points to a case study involving CPU.",
+    "acronyms": [
+      [
+        87,
+        90
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CPU-unmarked",
+    "text": "The case study on computer hardware concludes with a discussion of Central Processing Unit.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CRC-forward",
+    "text": "Cyclic Redundancy Check (CRC) appears in the design notes for computer hardware.",
+    "acronyms": [
+      [
+        25,
+        28
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        23
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CRC-alternate",
+    "text": "The glossary for the chapter on computer hardware lists CRC = Cyclic Redundancy Check.",
+    "acronyms": [
+      [
+        56,
+        59
+      ]
+    ],
+    "long-forms": [
+      [
+        62,
+        85
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CRC-unexpanded",
+    "text": "The report includes a diagram for CRC in the appendix on computer hardware.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CRC-unmarked",
+    "text": "The lecture on computer hardware covers Cyclic Redundancy Check in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DMA-forward",
+    "text": "For readers new to computer hardware, the appendix explains Direct Memory Access (DMA) in more detail.",
+    "acronyms": [
+      [
+        82,
+        85
+      ]
+    ],
+    "long-forms": [
+      [
+        60,
+        80
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DMA-alternate",
+    "text": "The report uses DMA, short for Direct Memory Access, in the section on computer hardware.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        31,
+        51
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DMA-unexpanded",
+    "text": "The discussion of computer hardware ends with an example involving DMA.",
+    "acronyms": [
+      [
+        67,
+        70
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DMA-unmarked",
+    "text": "The report mentions Direct Memory Access in the related work section on computer hardware.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DRAM-forward",
+    "text": "The prototype documentation mentions Dynamic Random-Access Memory (DRAM) in the discussion of computer hardware.",
+    "acronyms": [
+      [
+        67,
+        71
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        65
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DRAM-alternate",
+    "text": "The paper refers to Dynamic Random-Access Memory as DRAM in its discussion of computer hardware.",
+    "acronyms": [
+      [
+        52,
+        56
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        48
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DRAM-unexpanded",
+    "text": "DRAM is covered in the background material on computer hardware.",
+    "acronyms": [
+      [
+        0,
+        4
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-DRAM-unmarked",
+    "text": "The reading list for computer hardware includes a chapter devoted to Dynamic Random-Access Memory.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-FPGA-forward",
+    "text": "An exercise on computer hardware asks students to explain Field Programmable Gate Array (FPGA) with an example.",
+    "acronyms": [
+      [
+        89,
+        93
+      ]
+    ],
+    "long-forms": [
+      [
+        58,
+        87
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-FPGA-alternate",
+    "text": "The tutorial on computer hardware uses FPGA (Field Programmable Gate Array) in the table below.",
+    "acronyms": [
+      [
+        39,
+        43
+      ]
+    ],
+    "long-forms": [
+      [
+        45,
+        74
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-FPGA-unexpanded",
+    "text": "The next chapter revisits FPGA after introducing computer hardware.",
+    "acronyms": [
+      [
+        26,
+        30
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-FPGA-unmarked",
+    "text": "Field Programmable Gate Array appears in the appendix to the chapter on computer hardware.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GPU-forward",
+    "text": "In the section on computer hardware, the authors introduce Graphics Processing Unit (GPU).",
+    "acronyms": [
+      [
+        85,
+        88
+      ]
+    ],
+    "long-forms": [
+      [
+        59,
+        83
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GPU-alternate",
+    "text": "The guide lists GPU (Graphics Processing Unit) as a term to know when studying computer hardware.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        21,
+        45
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GPU-unexpanded",
+    "text": "The authors discuss GPU in the section on computer hardware.",
+    "acronyms": [
+      [
+        20,
+        23
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GPU-unmarked",
+    "text": "The design notes discuss Graphics Processing Unit in the context of computer hardware.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LCD-forward",
+    "text": "The workshop on computer hardware begins with an example of Liquid Crystal Display (LCD).",
+    "acronyms": [
+      [
+        84,
+        87
+      ]
+    ],
+    "long-forms": [
+      [
+        60,
+        82
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LCD-alternate",
+    "text": "For the discussion of computer hardware, the authors define LCD as Liquid Crystal Display.",
+    "acronyms": [
+      [
+        60,
+        63
+      ]
+    ],
+    "long-forms": [
+      [
+        67,
+        89
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LCD-unexpanded",
+    "text": "For further reading on computer hardware, the handout points to a case study involving LCD.",
+    "acronyms": [
+      [
+        87,
+        90
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LCD-unmarked",
+    "text": "The case study on computer hardware concludes with a discussion of Liquid Crystal Display.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MMU-forward",
+    "text": "Memory Management Unit (MMU) appears in the design notes for computer hardware.",
+    "acronyms": [
+      [
+        24,
+        27
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        22
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MMU-alternate",
+    "text": "The glossary for the chapter on computer hardware lists MMU = Memory Management Unit.",
+    "acronyms": [
+      [
+        56,
+        59
+      ]
+    ],
+    "long-forms": [
+      [
+        62,
+        84
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MMU-unexpanded",
+    "text": "The report includes a diagram for MMU in the appendix on computer hardware.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MMU-unmarked",
+    "text": "The lecture on computer hardware covers Memory Management Unit in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RAM-forward",
+    "text": "For readers new to computer hardware, the appendix explains Random-Access Memory (RAM) in more detail.",
+    "acronyms": [
+      [
+        82,
+        85
+      ]
+    ],
+    "long-forms": [
+      [
+        60,
+        80
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RAM-alternate",
+    "text": "The report uses RAM, short for Random-Access Memory, in the section on computer hardware.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        31,
+        51
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RAM-unexpanded",
+    "text": "The discussion of computer hardware ends with an example involving RAM.",
+    "acronyms": [
+      [
+        67,
+        70
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RAM-unmarked",
+    "text": "The report mentions Random-Access Memory in the related work section on computer hardware.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RAID-forward",
+    "text": "The prototype documentation mentions Redundant Array of Independent Disks (RAID) in the discussion of computer hardware.",
+    "acronyms": [
+      [
+        75,
+        79
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        73
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RAID-alternate",
+    "text": "The paper refers to Redundant Array of Independent Disks as RAID in its discussion of computer hardware.",
+    "acronyms": [
+      [
+        60,
+        64
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        56
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RAID-unexpanded",
+    "text": "RAID is covered in the background material on computer hardware.",
+    "acronyms": [
+      [
+        0,
+        4
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RAID-unmarked",
+    "text": "The reading list for computer hardware includes a chapter devoted to Redundant Array of Independent Disks.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ROM-forward",
+    "text": "An exercise on computer hardware asks students to explain Read-Only Memory (ROM) with an example.",
+    "acronyms": [
+      [
+        76,
+        79
+      ]
+    ],
+    "long-forms": [
+      [
+        58,
+        74
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ROM-alternate",
+    "text": "The tutorial on computer hardware uses ROM (Read-Only Memory) in the table below.",
+    "acronyms": [
+      [
+        39,
+        42
+      ]
+    ],
+    "long-forms": [
+      [
+        44,
+        60
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ROM-unexpanded",
+    "text": "The next chapter revisits ROM after introducing computer hardware.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ROM-unmarked",
+    "text": "Read-Only Memory appears in the appendix to the chapter on computer hardware.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SRAM-forward",
+    "text": "In the section on computer hardware, the authors introduce Static Random-Access Memory (SRAM).",
+    "acronyms": [
+      [
+        88,
+        92
+      ]
+    ],
+    "long-forms": [
+      [
+        59,
+        86
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SRAM-alternate",
+    "text": "The guide lists SRAM (Static Random-Access Memory) as a term to know when studying computer hardware.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        22,
+        49
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SRAM-unexpanded",
+    "text": "The authors discuss SRAM in the section on computer hardware.",
+    "acronyms": [
+      [
+        20,
+        24
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SRAM-unmarked",
+    "text": "The design notes discuss Static Random-Access Memory in the context of computer hardware.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSD-forward",
+    "text": "The workshop on computer hardware begins with an example of Solid-State Drive (SSD).",
+    "acronyms": [
+      [
+        79,
+        82
+      ]
+    ],
+    "long-forms": [
+      [
+        60,
+        77
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSD-alternate",
+    "text": "For the discussion of computer hardware, the authors define SSD as Solid-State Drive.",
+    "acronyms": [
+      [
+        60,
+        63
+      ]
+    ],
+    "long-forms": [
+      [
+        67,
+        84
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSD-unexpanded",
+    "text": "For further reading on computer hardware, the handout points to a case study involving SSD.",
+    "acronyms": [
+      [
+        87,
+        90
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSD-unmarked",
+    "text": "The case study on computer hardware concludes with a discussion of Solid-State Drive.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-AES-forward",
+    "text": "Advanced Encryption Standard (AES) appears in the design notes for system security.",
+    "acronyms": [
+      [
+        30,
+        33
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        28
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-AES-alternate",
+    "text": "The glossary for the chapter on system security lists AES = Advanced Encryption Standard.",
+    "acronyms": [
+      [
+        54,
+        57
+      ]
+    ],
+    "long-forms": [
+      [
+        60,
+        88
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-AES-unexpanded",
+    "text": "The report includes a diagram for AES in the appendix on system security.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-AES-unmarked",
+    "text": "The lecture on system security covers Advanced Encryption Standard in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MFA-forward",
+    "text": "For readers new to system security, the appendix explains Multi-factor authentication (MFA) in more detail.",
+    "acronyms": [
+      [
+        87,
+        90
+      ]
+    ],
+    "long-forms": [
+      [
+        58,
+        85
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MFA-alternate",
+    "text": "The report uses MFA, short for Multi-factor authentication, in the section on system security.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        31,
+        58
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MFA-unexpanded",
+    "text": "The discussion of system security ends with an example involving MFA.",
+    "acronyms": [
+      [
+        65,
+        68
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MFA-unmarked",
+    "text": "The report mentions Multi-factor authentication in the related work section on system security.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OTP-forward",
+    "text": "The prototype documentation mentions One-time password (OTP) in the discussion of system security.",
+    "acronyms": [
+      [
+        56,
+        59
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        54
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OTP-alternate",
+    "text": "The paper refers to One-time password as OTP in its discussion of system security.",
+    "acronyms": [
+      [
+        41,
+        44
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        37
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OTP-unexpanded",
+    "text": "OTP is covered in the background material on system security.",
+    "acronyms": [
+      [
+        0,
+        3
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-OTP-unmarked",
+    "text": "The reading list for system security includes a chapter devoted to One-time password.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PKI-forward",
+    "text": "An exercise on system security asks students to explain Public Key Infrastructure (PKI) with an example.",
+    "acronyms": [
+      [
+        83,
+        86
+      ]
+    ],
+    "long-forms": [
+      [
+        56,
+        81
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PKI-alternate",
+    "text": "The tutorial on system security uses PKI (Public Key Infrastructure) in the table below.",
+    "acronyms": [
+      [
+        37,
+        40
+      ]
+    ],
+    "long-forms": [
+      [
+        42,
+        67
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PKI-unexpanded",
+    "text": "The next chapter revisits PKI after introducing system security.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PKI-unmarked",
+    "text": "Public Key Infrastructure appears in the appendix to the chapter on system security.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SIEM-forward",
+    "text": "In the section on system security, the authors introduce Security information and event management (SIEM).",
+    "acronyms": [
+      [
+        100,
+        104
+      ]
+    ],
+    "long-forms": [
+      [
+        57,
+        98
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SIEM-alternate",
+    "text": "The guide lists SIEM (Security information and event management) as a term to know when studying system security.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        22,
+        63
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SIEM-unexpanded",
+    "text": "The authors discuss SIEM in the section on system security.",
+    "acronyms": [
+      [
+        20,
+        24
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SIEM-unmarked",
+    "text": "The design notes discuss Security information and event management in the context of system security.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSH-forward",
+    "text": "The workshop on system security begins with an example of Secure Shell (SSH).",
+    "acronyms": [
+      [
+        72,
+        75
+      ]
+    ],
+    "long-forms": [
+      [
+        58,
+        70
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSH-alternate",
+    "text": "For the discussion of system security, the authors define SSH as Secure Shell.",
+    "acronyms": [
+      [
+        58,
+        61
+      ]
+    ],
+    "long-forms": [
+      [
+        65,
+        77
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSH-unexpanded",
+    "text": "For further reading on system security, the handout points to a case study involving SSH.",
+    "acronyms": [
+      [
+        85,
+        88
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSH-unmarked",
+    "text": "The case study on system security concludes with a discussion of Secure Shell.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSL-forward",
+    "text": "Secure Socket Layer (SSL) appears in the design notes for system security.",
+    "acronyms": [
+      [
+        21,
+        24
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        19
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSL-alternate",
+    "text": "The glossary for the chapter on system security lists SSL = Secure Socket Layer.",
+    "acronyms": [
+      [
+        54,
+        57
+      ]
+    ],
+    "long-forms": [
+      [
+        60,
+        79
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSL-unexpanded",
+    "text": "The report includes a diagram for SSL in the appendix on system security.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSL-unmarked",
+    "text": "The lecture on system security covers Secure Socket Layer in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSO-forward",
+    "text": "For readers new to system security, the appendix explains Single Sign On (SSO) in more detail.",
+    "acronyms": [
+      [
+        74,
+        77
+      ]
+    ],
+    "long-forms": [
+      [
+        58,
+        72
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSO-alternate",
+    "text": "The report uses SSO, short for Single Sign On, in the section on system security.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        31,
+        45
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSO-unexpanded",
+    "text": "The discussion of system security ends with an example involving SSO.",
+    "acronyms": [
+      [
+        65,
+        68
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SSO-unmarked",
+    "text": "The report mentions Single Sign On in the related work section on system security.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TLS-forward",
+    "text": "The prototype documentation mentions Transport Layer Security (TLS) in the discussion of system security.",
+    "acronyms": [
+      [
+        63,
+        66
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        61
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TLS-alternate",
+    "text": "The paper refers to Transport Layer Security as TLS in its discussion of system security.",
+    "acronyms": [
+      [
+        48,
+        51
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        44
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TLS-unexpanded",
+    "text": "TLS is covered in the background material on system security.",
+    "acronyms": [
+      [
+        0,
+        3
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TLS-unmarked",
+    "text": "The reading list for system security includes a chapter devoted to Transport Layer Security.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TPM-forward",
+    "text": "An exercise on system security asks students to explain Trusted Platform Module (TPM) with an example.",
+    "acronyms": [
+      [
+        81,
+        84
+      ]
+    ],
+    "long-forms": [
+      [
+        56,
+        79
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TPM-alternate",
+    "text": "The tutorial on system security uses TPM (Trusted Platform Module) in the table below.",
+    "acronyms": [
+      [
+        37,
+        40
+      ]
+    ],
+    "long-forms": [
+      [
+        42,
+        65
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TPM-unexpanded",
+    "text": "The next chapter revisits TPM after introducing system security.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-TPM-unmarked",
+    "text": "Trusted Platform Module appears in the appendix to the chapter on system security.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-AI-forward",
+    "text": "In the section on model design and evaluation, the authors introduce Artificial Intelligence (AI).",
+    "acronyms": [
+      [
+        94,
+        96
+      ]
+    ],
+    "long-forms": [
+      [
+        69,
+        92
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-AI-alternate",
+    "text": "The guide lists AI (Artificial Intelligence) as a term to know when studying model design and evaluation.",
+    "acronyms": [
+      [
+        16,
+        18
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        43
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-AI-unexpanded",
+    "text": "The authors discuss AI in the section on model design and evaluation.",
+    "acronyms": [
+      [
+        20,
+        22
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-AI-unmarked",
+    "text": "The design notes discuss Artificial Intelligence in the context of model design and evaluation.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CNN-forward",
+    "text": "The workshop on model design and evaluation begins with an example of Convolutional Neural Network (CNN).",
+    "acronyms": [
+      [
+        100,
+        103
+      ]
+    ],
+    "long-forms": [
+      [
+        70,
+        98
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CNN-alternate",
+    "text": "For the discussion of model design and evaluation, the authors define CNN as Convolutional Neural Network.",
+    "acronyms": [
+      [
+        70,
+        73
+      ]
+    ],
+    "long-forms": [
+      [
+        77,
+        105
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CNN-unexpanded",
+    "text": "For further reading on model design and evaluation, the handout points to a case study involving CNN.",
+    "acronyms": [
+      [
+        97,
+        100
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-CNN-unmarked",
+    "text": "The case study on model design and evaluation concludes with a discussion of Convolutional Neural Network.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GAN-forward",
+    "text": "Generative Adversarial Network (GAN) appears in the design notes for model design and evaluation.",
+    "acronyms": [
+      [
+        32,
+        35
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        30
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GAN-alternate",
+    "text": "The glossary for the chapter on model design and evaluation lists GAN = Generative Adversarial Network.",
+    "acronyms": [
+      [
+        66,
+        69
+      ]
+    ],
+    "long-forms": [
+      [
+        72,
+        102
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GAN-unexpanded",
+    "text": "The report includes a diagram for GAN in the appendix on model design and evaluation.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GAN-unmarked",
+    "text": "The lecture on model design and evaluation covers Generative Adversarial Network in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LLM-forward",
+    "text": "For readers new to model design and evaluation, the appendix explains Large Language Model (LLM) in more detail.",
+    "acronyms": [
+      [
+        92,
+        95
+      ]
+    ],
+    "long-forms": [
+      [
+        70,
+        90
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LLM-alternate",
+    "text": "The report uses LLM, short for Large Language Model, in the section on model design and evaluation.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        31,
+        51
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LLM-unexpanded",
+    "text": "The discussion of model design and evaluation ends with an example involving LLM.",
+    "acronyms": [
+      [
+        77,
+        80
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LLM-unmarked",
+    "text": "The report mentions Large Language Model in the related work section on model design and evaluation.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LSTM-forward",
+    "text": "The prototype documentation mentions Long Short-Term Memory (LSTM) in the discussion of model design and evaluation.",
+    "acronyms": [
+      [
+        61,
+        65
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        59
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LSTM-alternate",
+    "text": "The paper refers to Long Short-Term Memory as LSTM in its discussion of model design and evaluation.",
+    "acronyms": [
+      [
+        46,
+        50
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        42
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LSTM-unexpanded",
+    "text": "LSTM is covered in the background material on model design and evaluation.",
+    "acronyms": [
+      [
+        0,
+        4
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-LSTM-unmarked",
+    "text": "The reading list for model design and evaluation includes a chapter devoted to Long Short-Term Memory.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ML-forward",
+    "text": "An exercise on model design and evaluation asks students to explain Machine Learning (ML) with an example.",
+    "acronyms": [
+      [
+        86,
+        88
+      ]
+    ],
+    "long-forms": [
+      [
+        68,
+        84
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ML-alternate",
+    "text": "The tutorial on model design and evaluation uses ML (Machine Learning) in the table below.",
+    "acronyms": [
+      [
+        49,
+        51
+      ]
+    ],
+    "long-forms": [
+      [
+        53,
+        69
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ML-unexpanded",
+    "text": "The next chapter revisits ML after introducing model design and evaluation.",
+    "acronyms": [
+      [
+        26,
+        28
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-ML-unmarked",
+    "text": "Machine Learning appears in the appendix to the chapter on model design and evaluation.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NLP-forward",
+    "text": "In the section on model design and evaluation, the authors introduce Natural Language Processing (NLP).",
+    "acronyms": [
+      [
+        98,
+        101
+      ]
+    ],
+    "long-forms": [
+      [
+        69,
+        96
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NLP-alternate",
+    "text": "The guide lists NLP (Natural Language Processing) as a term to know when studying model design and evaluation.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        21,
+        48
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NLP-unexpanded",
+    "text": "The authors discuss NLP in the section on model design and evaluation.",
+    "acronyms": [
+      [
+        20,
+        23
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-NLP-unmarked",
+    "text": "The design notes discuss Natural Language Processing in the context of model design and evaluation.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RL-forward",
+    "text": "The workshop on model design and evaluation begins with an example of Reinforcement Learning (RL).",
+    "acronyms": [
+      [
+        94,
+        96
+      ]
+    ],
+    "long-forms": [
+      [
+        70,
+        92
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RL-alternate",
+    "text": "For the discussion of model design and evaluation, the authors define RL as Reinforcement Learning.",
+    "acronyms": [
+      [
+        70,
+        72
+      ]
+    ],
+    "long-forms": [
+      [
+        76,
+        98
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RL-unexpanded",
+    "text": "For further reading on model design and evaluation, the handout points to a case study involving RL.",
+    "acronyms": [
+      [
+        97,
+        99
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RL-unmarked",
+    "text": "The case study on model design and evaluation concludes with a discussion of Reinforcement Learning.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RNN-forward",
+    "text": "Recurrent Neural Network (RNN) appears in the design notes for model design and evaluation.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        24
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RNN-alternate",
+    "text": "The glossary for the chapter on model design and evaluation lists RNN = Recurrent Neural Network.",
+    "acronyms": [
+      [
+        66,
+        69
+      ]
+    ],
+    "long-forms": [
+      [
+        72,
+        96
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RNN-unexpanded",
+    "text": "The report includes a diagram for RNN in the appendix on model design and evaluation.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-RNN-unmarked",
+    "text": "The lecture on model design and evaluation covers Recurrent Neural Network in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SVM-forward",
+    "text": "For readers new to model design and evaluation, the appendix explains Support Vector Machine (SVM) in more detail.",
+    "acronyms": [
+      [
+        94,
+        97
+      ]
+    ],
+    "long-forms": [
+      [
+        70,
+        92
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SVM-alternate",
+    "text": "The report uses SVM, short for Support Vector Machine, in the section on model design and evaluation.",
+    "acronyms": [
+      [
+        16,
+        19
+      ]
+    ],
+    "long-forms": [
+      [
+        31,
+        53
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SVM-unexpanded",
+    "text": "The discussion of model design and evaluation ends with an example involving SVM.",
+    "acronyms": [
+      [
+        77,
+        80
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SVM-unmarked",
+    "text": "The report mentions Support Vector Machine in the related work section on model design and evaluation.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GIF-forward",
+    "text": "The prototype documentation mentions Graphics Interchange Format (GIF) in the discussion of digital media formats.",
+    "acronyms": [
+      [
+        66,
+        69
+      ]
+    ],
+    "long-forms": [
+      [
+        37,
+        64
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GIF-alternate",
+    "text": "The paper refers to Graphics Interchange Format as GIF in its discussion of digital media formats.",
+    "acronyms": [
+      [
+        51,
+        54
+      ]
+    ],
+    "long-forms": [
+      [
+        20,
+        47
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GIF-unexpanded",
+    "text": "GIF is covered in the background material on digital media formats.",
+    "acronyms": [
+      [
+        0,
+        3
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-GIF-unmarked",
+    "text": "The reading list for digital media formats includes a chapter devoted to Graphics Interchange Format.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JPEG-forward",
+    "text": "An exercise on digital media formats asks students to explain Joint Photographic Experts Group (JPEG) with an example.",
+    "acronyms": [
+      [
+        96,
+        100
+      ]
+    ],
+    "long-forms": [
+      [
+        62,
+        94
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JPEG-alternate",
+    "text": "The tutorial on digital media formats uses JPEG (Joint Photographic Experts Group) in the table below.",
+    "acronyms": [
+      [
+        43,
+        47
+      ]
+    ],
+    "long-forms": [
+      [
+        49,
+        81
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JPEG-unexpanded",
+    "text": "The next chapter revisits JPEG after introducing digital media formats.",
+    "acronyms": [
+      [
+        26,
+        30
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-JPEG-unmarked",
+    "text": "Joint Photographic Experts Group appears in the appendix to the chapter on digital media formats.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MPEG-forward",
+    "text": "In the section on digital media formats, the authors introduce Motion Pictures Experts Group (MPEG).",
+    "acronyms": [
+      [
+        94,
+        98
+      ]
+    ],
+    "long-forms": [
+      [
+        63,
+        92
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MPEG-alternate",
+    "text": "The guide lists MPEG (Motion Pictures Experts Group) as a term to know when studying digital media formats.",
+    "acronyms": [
+      [
+        16,
+        20
+      ]
+    ],
+    "long-forms": [
+      [
+        22,
+        51
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MPEG-unexpanded",
+    "text": "The authors discuss MPEG in the section on digital media formats.",
+    "acronyms": [
+      [
+        20,
+        24
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-MPEG-unmarked",
+    "text": "The design notes discuss Motion Pictures Experts Group in the context of digital media formats.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PNG-forward",
+    "text": "The workshop on digital media formats begins with an example of Portable Network Graphics (PNG).",
+    "acronyms": [
+      [
+        91,
+        94
+      ]
+    ],
+    "long-forms": [
+      [
+        64,
+        89
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PNG-alternate",
+    "text": "For the discussion of digital media formats, the authors define PNG as Portable Network Graphics.",
+    "acronyms": [
+      [
+        64,
+        67
+      ]
+    ],
+    "long-forms": [
+      [
+        71,
+        96
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PNG-unexpanded",
+    "text": "For further reading on digital media formats, the handout points to a case study involving PNG.",
+    "acronyms": [
+      [
+        91,
+        94
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-PNG-unmarked",
+    "text": "The case study on digital media formats concludes with a discussion of Portable Network Graphics.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SVG-forward",
+    "text": "Scalable Vector Graphics (SVG) appears in the design notes for digital media formats.",
+    "acronyms": [
+      [
+        26,
+        29
+      ]
+    ],
+    "long-forms": [
+      [
+        0,
+        24
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SVG-alternate",
+    "text": "The glossary for the chapter on digital media formats lists SVG = Scalable Vector Graphics.",
+    "acronyms": [
+      [
+        60,
+        63
+      ]
+    ],
+    "long-forms": [
+      [
+        66,
+        90
+      ]
+    ],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SVG-unexpanded",
+    "text": "The report includes a diagram for SVG in the appendix on digital media formats.",
+    "acronyms": [
+      [
+        34,
+        37
+      ]
+    ],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  },
+  {
+    "id": "kaggle-csit-v1-SVG-unmarked",
+    "text": "The lecture on digital media formats covers Scalable Vector Graphics in more detail.",
+    "acronyms": [],
+    "long-forms": [],
+    "synthetic": true,
+    "source": "kaggle:youcmoulai/cs-and-it-acronyms:1"
+  }
+]

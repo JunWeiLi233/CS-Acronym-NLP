@@ -1,32 +1,28 @@
-"""Baselines from the proposal ("Every system we build has the goal of
-beating two baselines").
+"""Baseline systems for abbreviation detection.
 
-1. Majority class: every token is B-O.
-2. Rule-based detector: a token is B-AC if it
-     (a) is 2-10 characters long and has at least two uppercase letters, or
-     (b) is a short token alone inside parentheses after a candidate phrase
-         (a preceding word starts with the token's first letter), or
-     (c) is not in an English dictionary and looks abbreviation-like
-         (an internal capital or a letter+digit mix), following
-         Kreuzthaler et al. (2016).
-   Filters for the false positives reported by Vanopstal et al. (2010):
-   all-caps titles, name initials, Roman numerals, and single letters used
-   as labels ("types A, B and C").
-   The detector only finds abbreviations; it never labels long forms.
-
-Usage:
-    python src/baseline.py                 # evaluate on the dev split
-    python src/baseline.py --split path/to/test.jsonl
+The majority baseline labels every token B-O. The heuristic baseline looks for
+short tokens with capital letters, definition-like parentheses, or an unusual
+spelling. It filters common name initials, Roman numerals, and all-caps headings.
 """
 
 import argparse
 
 from evaluate import evaluate, format_report
-from utils import (OUTSIDE, ROMAN_IVX, in_lexicon, is_word, load_lexicon,
-                   load_split, save_jsonl, upper_count, RESULTS_DIR)
+from utils import (
+    OUTSIDE,
+    RESULTS_DIR,
+    ROMAN_IVX,
+    in_lexicon,
+    is_word,
+    load_lexicon,
+    load_split,
+    save_jsonl,
+    upper_count,
+)
 
 
 def majority_baseline(tokens):
+    """Label every token as outside an abbreviation or long form."""
     return [OUTSIDE] * len(tokens)
 
 
@@ -58,43 +54,50 @@ def _inside_parens_alone(tokens, i):
 
 
 def _has_candidate_phrase(tokens, i, max_back=None):
-    """Some word before the '(' starts with the token's first letter."""
-    first = tokens[i][0].lower()
-    n = max_back or min(len(tokens[i]) + 5, 2 * len(tokens[i]))
-    words = [t for t in tokens[: i - 1] if is_word(t)][-n:]
-    return any(w[0].lower() == first for w in words)
+    """Check whether a word before the opening parenthesis has the same initial."""
+    abbreviation = tokens[i]
+    initial = abbreviation[0].lower()
+    window = max_back or min(len(abbreviation) + 5, 2 * len(abbreviation))
+    words = [token for token in tokens[: i - 1] if is_word(token)]
+    return any(word[0].lower() == initial for word in words[-window:])
 
 
 def detect_abbreviations(tokens, lexicon=None):
     """Return the set of token indices the heuristic detector marks B-AC."""
     lexicon = load_lexicon() if lexicon is None else lexicon
-    title = _is_all_caps_title(tokens)
+    all_caps_title = _is_all_caps_title(tokens)
     found = set()
-    for i, t in enumerate(tokens):
-        if not (2 <= len(t) <= 10) or not any(c.isalpha() for c in t):
+    for index, token in enumerate(tokens):
+        if not (2 <= len(token) <= 10) or not any(char.isalpha() for char in token):
             continue
-        # filters
-        if ROMAN_IVX.match(t) or _is_name_initials(tokens, i):
+        if ROMAN_IVX.match(token) or _is_name_initials(tokens, index):
             continue
-        in_parens = _inside_parens_alone(tokens, i)
-        if title and not in_parens:
+        in_parens = _inside_parens_alone(tokens, index)
+        if all_caps_title and not in_parens:
             continue
 
-        shape_rule = upper_count(t) >= 2
-        paren_rule = (in_parens and t[0].isalnum() and not in_lexicon(t, lexicon)
-                      and _has_candidate_phrase(tokens, i))
-        oov_rule = (not in_lexicon(t, lexicon)
-                    and (any(c.isupper() for c in t[1:])
-                         or (any(c.isdigit() for c in t) and any(c.isupper() for c in t))))
-        if shape_rule or paren_rule or oov_rule:
-            found.add(i)
+        if upper_count(token) >= 2:
+            found.add(index)
+            continue
+        if in_lexicon(token, lexicon):
+            continue
+
+        follows_candidate_phrase = (
+            in_parens and token[0].isalnum() and _has_candidate_phrase(tokens, index)
+        )
+        has_internal_capital = any(char.isupper() for char in token[1:])
+        mixes_digits_and_capitals = (
+            any(char.isdigit() for char in token) and any(char.isupper() for char in token)
+        )
+        if follows_candidate_phrase or has_internal_capital or mixes_digits_and_capitals:
+            found.add(index)
     return found
 
 
 def rule_detector_baseline(tokens, lexicon=None):
     labels = [OUTSIDE] * len(tokens)
-    for i in detect_abbreviations(tokens, lexicon):
-        labels[i] = "B-AC"
+    for index in detect_abbreviations(tokens, lexicon):
+        labels[index] = "B-AC"
     return labels
 
 
@@ -108,8 +111,8 @@ def main():
     records = load_split(args.split, args.data)
     lexicon = load_lexicon()
     systems = {
-        "majority": lambda toks: majority_baseline(toks),
-        "rule_detector": lambda toks: rule_detector_baseline(toks, lexicon),
+        "majority": majority_baseline,
+        "rule_detector": lambda tokens: rule_detector_baseline(tokens, lexicon),
     }
     for name, fn in systems.items():
         preds = [fn(r["tokens"]) for r in records]

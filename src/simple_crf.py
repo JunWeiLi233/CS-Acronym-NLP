@@ -1,15 +1,11 @@
-"""A small linear-chain CRF in numpy/scipy.
+"""Linear-chain CRF for environments without python-crfsuite.
 
-This is a fallback for when sklearn-crfsuite cannot be installed. It has
-the same fit / predict interface (lists of feature-dict sequences in, lists
-of label sequences out), trains with L-BFGS on the L2-regularised negative
-log-likelihood, and decodes with Viterbi. sklearn-crfsuite is faster and
-supports L1 (c1), so train_crf.py prefers it when available.
-
-Objective:  sum_i -log p(y_i | x_i)  +  c2 * ||w||^2
+L-BFGS minimizes the negative log-likelihood with an L2 penalty on the
+feature weights. Viterbi finds the highest-scoring label sequence.
 """
 
 import time
+from collections import Counter
 
 import numpy as np
 from scipy import sparse
@@ -18,53 +14,54 @@ from scipy.special import logsumexp
 
 
 class LinearChainCRF:
+    """Train and decode a first-order CRF with sparse token features."""
+
     def __init__(self, c2=0.1, max_iterations=150, min_freq=1, verbose=True):
         self.c2 = c2
         self.max_iterations = max_iterations
         self.min_freq = min_freq
         self.verbose = verbose
 
-    # ---- featurisation -------------------------------------------------------
-
     @staticmethod
     def _items(fdict):
-        for k, v in fdict.items():
-            if isinstance(v, bool):
-                if v:
-                    yield k, 1.0
-            elif isinstance(v, (int, float)):
-                if v:
-                    yield k, float(v)
+        for name, value in fdict.items():
+            if isinstance(value, bool):
+                if value:
+                    yield name, 1.0
+            elif isinstance(value, (int, float)):
+                if value:
+                    yield name, float(value)
             else:
-                yield f"{k}={v}", 1.0
+                yield f"{name}={value}", 1.0
 
     def _build_vocab(self, X):
-        counts = {}
-        for seq in X:
-            for fd in seq:
-                for name, _ in self._items(fd):
-                    counts[name] = counts.get(name, 0) + 1
-        names = sorted(n for n, c in counts.items() if c >= self.min_freq)
-        self.feature_index_ = {n: i for i, n in enumerate(names)}
+        counts = Counter()
+        for sequence in X:
+            for features in sequence:
+                for name, _ in self._items(features):
+                    counts[name] += 1
+        names = sorted(name for name, count in counts.items() if count >= self.min_freq)
+        self.feature_index_ = {name: index for index, name in enumerate(names)}
 
     def _matrix(self, X):
-        rows, cols, vals, lengths = [], [], [], []
-        r = 0
-        idx = self.feature_index_
-        for seq in X:
-            lengths.append(len(seq))
-            for fd in seq:
-                for name, v in self._items(fd):
-                    j = idx.get(name)
-                    if j is not None:
-                        rows.append(r)
-                        cols.append(j)
-                        vals.append(v)
-                r += 1
-        M = sparse.csr_matrix((vals, (rows, cols)), shape=(r, len(idx)), dtype=np.float64)
-        return M, np.array(lengths)
-
-    # ---- parameters ----------------------------------------------------------
+        rows, columns, values, lengths = [], [], [], []
+        token_index = 0
+        for sequence in X:
+            lengths.append(len(sequence))
+            for features in sequence:
+                for name, value in self._items(features):
+                    column = self.feature_index_.get(name)
+                    if column is not None:
+                        rows.append(token_index)
+                        columns.append(column)
+                        values.append(value)
+                token_index += 1
+        matrix = sparse.csr_matrix(
+            (values, (rows, columns)),
+            shape=(token_index, len(self.feature_index_)),
+            dtype=np.float64,
+        )
+        return matrix, np.array(lengths)
 
     def _unpack(self, theta):
         F, L = self.n_features_, self.n_labels_
@@ -82,8 +79,6 @@ class LinearChainCRF:
         mask = np.arange(T)[None, :] < lengths[:, None]
         P[mask] = E
         return P, mask
-
-    # ---- objective -----------------------------------------------------------
 
     def _objective(self, theta):
         W, trans, start, end = self._unpack(theta)
@@ -144,19 +139,18 @@ class LinearChainCRF:
         grad = np.concatenate([np.asarray(dW).ravel(), dtrans.ravel(), dstart, dend])
         return nll, grad
 
-    # ---- public API ----------------------------------------------------------
-
     def fit(self, X, y):
-        t0 = time.time()
-        self.classes_ = sorted({l for seq in y for l in seq})
-        self.label_index_ = {l: i for i, l in enumerate(self.classes_)}
+        """Fit the feature and transition weights to labeled sequences."""
+        started = time.time()
+        self.classes_ = sorted({label for sequence in y for label in sequence})
+        self.label_index_ = {label: index for index, label in enumerate(self.classes_)}
         self._build_vocab(X)
         self._X, self._lengths = self._matrix(X)
         self.n_features_, self.n_labels_ = self._X.shape[1], len(self.classes_)
         S, T = len(y), int(self._lengths.max())
         self._Y = np.zeros((S, T), dtype=int)
-        for i, seq in enumerate(y):
-            self._Y[i, : len(seq)] = [self.label_index_[l] for l in seq]
+        for index, sequence in enumerate(y):
+            self._Y[index, : len(sequence)] = [self.label_index_[label] for label in sequence]
         self._mask = np.arange(T)[None, :] < self._lengths[:, None]
         self._Yonehot = np.eye(self.n_labels_)[self._Y[self._mask]]
 
@@ -164,34 +158,39 @@ class LinearChainCRF:
         theta0 = np.zeros(self.n_features_ * L + L * L + 2 * L)
         if self.verbose:
             print(f"  fallback CRF: {self.n_features_} features, {S} sequences, {L} labels")
-        res = minimize(self._objective, theta0, jac=True, method="L-BFGS-B",
-                       options={"maxiter": self.max_iterations})
-        self.W_, self.trans_, self.start_, self.end_ = self._unpack(res.x)
+        result = minimize(
+            self._objective, theta0, jac=True, method="L-BFGS-B",
+            options={"maxiter": self.max_iterations},
+        )
+        self.W_, self.trans_, self.start_, self.end_ = self._unpack(result.x)
         if self.verbose:
-            print(f"  done in {time.time() - t0:.0f}s, {res.nit} iterations, loss {res.fun:.1f}")
+            print(f"  done in {time.time() - started:.0f}s, {result.nit} iterations, loss {result.fun:.1f}")
         del self._X, self._Y, self._mask, self._Yonehot, self._lengths
         return self
 
     def predict(self, X):
-        M, lengths = self._matrix(X)
-        E_all = M @ self.W_
-        out, pos = [], 0
-        for n in lengths:
-            E = E_all[pos: pos + n]
-            pos += n
-            out.append([self.classes_[k] for k in self._viterbi(E)] if n else [])
-        return out
+        """Return the highest-scoring label sequence for each input."""
+        feature_matrix, lengths = self._matrix(X)
+        emissions = feature_matrix @ self.W_
+        predictions = []
+        start = 0
+        for length in lengths:
+            end = start + length
+            path = self._viterbi(emissions[start:end]) if length else []
+            predictions.append([self.classes_[label] for label in path])
+            start = end
+        return predictions
 
-    def _viterbi(self, E):
-        n, L = E.shape
-        score = self.start_ + E[0]
-        back = np.zeros((n, L), dtype=int)
-        for t in range(1, n):
-            cand = score[:, None] + self.trans_
-            back[t] = cand.argmax(axis=0)
-            score = cand.max(axis=0) + E[t]
-        score = score + self.end_
-        path = [int(score.argmax())]
-        for t in range(n - 1, 0, -1):
-            path.append(int(back[t, path[-1]]))
+    def _viterbi(self, emissions):
+        token_count, label_count = emissions.shape
+        scores = self.start_ + emissions[0]
+        previous_label = np.zeros((token_count, label_count), dtype=int)
+        for index in range(1, token_count):
+            transitions = scores[:, None] + self.trans_
+            previous_label[index] = transitions.argmax(axis=0)
+            scores = transitions.max(axis=0) + emissions[index]
+
+        path = [int((scores + self.end_).argmax())]
+        for index in range(token_count - 1, 0, -1):
+            path.append(int(previous_label[index, path[-1]]))
         return path[::-1]

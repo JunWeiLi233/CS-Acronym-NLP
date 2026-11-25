@@ -94,42 +94,44 @@ class CRFModel:
         self.use_pos = False
 
     def featurize(self, records, fit=False):
-        pos = None
+        sentence_tags = None
         if "pos" in self.groups and (fit or self.use_pos):
             from pos import get_pos_tags
-            pos = get_pos_tags([r["tokens"] for r in records])
+
+            sentence_tags = get_pos_tags([record["tokens"] for record in records])
             if fit:
-                self.use_pos = pos is not None
-            elif pos is None:
+                self.use_pos = sentence_tags is not None
+            elif sentence_tags is None:
                 print("[warn] model was trained with POS tags but spaCy is unavailable now")
-        out = []
-        for i, r in enumerate(records):
-            p, t = (pos[i] if pos is not None else (None, None))
-            out.append(self.extractor.sent2features(r["tokens"], p, t))
-        return out
+        if sentence_tags is None:
+            return [self.extractor.sent2features(record["tokens"]) for record in records]
+        return [
+            self.extractor.sent2features(record["tokens"], pos_tags, fine_tags)
+            for record, (pos_tags, fine_tags) in zip(records, sentence_tags)
+        ]
 
     def fit(self, records):
-        X = self.featurize(records, fit=True)
-        y = [r["labels"] for r in records]
-        self.crf.fit(X, y)
+        features = self.featurize(records, fit=True)
+        labels = [record["labels"] for record in records]
+        self.crf.fit(features, labels)
         return self
 
     def predict(self, records, propagation="default"):
+        """Predict BIO labels, using the model's propagation setting by default."""
         if propagation == "default":
             propagation = self.propagation
-        preds = self.crf.predict(self.featurize(records))
-        preds = [list(p) for p in preds]
+        predictions = [list(labels) for labels in self.crf.predict(self.featurize(records))]
         if propagation:
-            preds = propagate(records, preds, scope=propagation)
-        return preds
+            predictions = propagate(records, predictions, scope=propagation)
+        return predictions
 
     def save(self, path):
         path = str(path)
         os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-        with open(path, "wb") as f:
-            pickle.dump(self, f)
+        with open(path, "wb") as model_file:
+            pickle.dump(self, model_file)
 
     @staticmethod
     def load(path):
-        with open(path, "rb") as f:
-            return pickle.load(f)
+        with open(path, "rb") as model_file:
+            return pickle.load(model_file)

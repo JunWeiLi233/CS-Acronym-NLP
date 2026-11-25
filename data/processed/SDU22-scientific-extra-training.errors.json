@@ -1,0 +1,170 @@
+[
+  {
+    "index": 2,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 20,
+    "error": "No tokens aligned with span[35, 38]"
+  },
+  {
+    "index": 29,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 30,
+    "error": "No tokens aligned with span[222, 228]"
+  },
+  {
+    "index": 40,
+    "error": "No tokens aligned with span[34, 38]"
+  },
+  {
+    "index": 52,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 54,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 60,
+    "error": "No tokens aligned with span[5, 11]"
+  },
+  {
+    "index": 70,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 71,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 92,
+    "error": "No tokens aligned with span[17, 21]"
+  },
+  {
+    "index": 100,
+    "error": "Span does not align with token boundaries"
+  },
+  {
+    "index": 118,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 132,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 135,
+    "error": "Span does not align with token boundaries"
+  },
+  {
+    "index": 150,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 163,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 168,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 215,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 222,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 229,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 256,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 262,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 264,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 290,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 303,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 308,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 310,
+    "error": "No tokens aligned with span[47, 53]"
+  },
+  {
+    "index": 312,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 320,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 326,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 351,
+    "error": "Span does not align with token boundaries"
+  },
+  {
+    "index": 368,
+    "error": "No tokens aligned with span[76, 86]"
+  },
+  {
+    "index": 387,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 399,
+    "error": "No tokens aligned with span[1, 6]"
+  },
+  {
+    "index": 407,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 431,
+    "error": "No tokens aligned with span[67, 69]"
+  },
+  {
+    "index": 443,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 444,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 453,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 463,
+    "error": "Abbreviation spans must contain one token"
+  },
+  {
+    "index": 480,
+    "error": "No tokens aligned with span[3, 5]"
+  }
+]

@@ -1,6 +1,6 @@
-"""CRF features, adapted from Vanopstal et al. (2010) as listed in the
-proposal. Features are organised in groups so that each group can be
-removed for the ablation study (train_crf.py --ablation).
+"""Token features for the CRF, grouped for train_crf.py --ablation.
+
+The feature design draws on Vanopstal et al. (2010).
 
   form      lowercased token, prefixes/suffixes up to 4 chars, word shape
             ("XXX", "Xxxxx", "x-XX") and a collapsed shape ("X", "Xx", "x-X")
@@ -10,49 +10,62 @@ removed for the ablation study (train_crf.py --ablation).
   paren     inside parentheses, next to "(" / ")", distance to the next "("
   pos       spaCy part-of-speech tags (only if spaCy is installed)
   dict      token is in an English word list (Kreuzthaler et al., 2016)
+  csit      token or its singular form is in the Kaggle CS & IT acronym lexicon
   defmatch  definition match: the token's first letter starts a word within
             the preceding 3 x N words (N = token length); for long-form
             tokens, whether a following parenthesised short form starts
             with / contains the token's first letter
-  rules     (extension, not in the proposal) output of the Schwartz & Hearst
-            rules as features: token is a short form / inside a long form
-            found by the rule-based system
+  rules     short-form, long-form, and repetition cues from Schwartz–Hearst
+            and glossary matches
 
-Feature values are str / bool / float so the same dicts work with
-sklearn-crfsuite and with the fallback CRF in simple_crf.py.
+Both CRF backends accept strings, booleans, and numbers as feature values.
 """
 
+import json
 import re
 
 from rule_based import find_definitions, find_glossary_definitions
-from utils import ROMAN_FULL, in_lexicon, is_word, load_lexicon, upper_count
+from utils import (
+    ROMAN_FULL,
+    ROOT,
+    in_lexicon,
+    is_word,
+    load_lexicon,
+    strip_plural,
+    upper_count,
+)
 
-ALL_GROUPS = ("form", "ortho", "context", "paren", "pos", "dict", "defmatch", "rules")
+ALL_GROUPS = ("form", "ortho", "context", "paren", "pos", "dict", "defmatch", "rules", "csit")
 PROPOSAL_GROUPS = ("form", "ortho", "context", "paren", "pos", "dict", "defmatch")
+CSIT_LEXICON_PATH = ROOT / "data" / "lexicon" / "csit_acronyms.json"
 
 VOWELS = set("aeiouAEIOU")
+NEIGHBOR_FEATURES = (
+    "lower", "sshape", "all_caps", "init_cap", "internal_cap", "has_digit",
+    "punct", "in_dict", "oov", "pos", "rule_lf", "rule_sf",
+)
 
 
 def word_shape(token):
-    out = []
-    for c in token:
-        if c.isupper():
-            out.append("X")
-        elif c.islower():
-            out.append("x")
-        elif c.isdigit():
-            out.append("d")
+    shape = []
+    for char in token:
+        if char.isupper():
+            shape.append("X")
+        elif char.islower():
+            shape.append("x")
+        elif char.isdigit():
+            shape.append("d")
         else:
-            out.append(c)
-    return "".join(out)
+            shape.append(char)
+    return "".join(shape)
 
 
 def short_shape(token):
     return re.sub(r"(.)\1+", r"\1", word_shape(token))
 
 
-def _bucket(n, cap):
-    return str(n) if n <= cap else f">{cap}"
+def _bucket(value, cap):
+    return str(value) if value <= cap else f">{cap}"
 
 
 class FeatureExtractor:
@@ -62,55 +75,55 @@ class FeatureExtractor:
         if unknown:
             raise ValueError(f"unknown feature groups: {unknown}")
         self.lexicon = load_lexicon() if lexicon is None else lexicon
+        if "csit" in self.groups:
+            with CSIT_LEXICON_PATH.open(encoding="utf-8") as source:
+                self.csit_acronyms = frozenset(json.load(source))
 
-    # ---- single-token features (also used for neighbours) -----------------
-
-    def _token_features(self, tok, pos_tag=None, tag=None):
-        f = {}
-        g = self.groups
-        if "form" in g:
-            low = tok.lower()
-            f["lower"] = low
-            f["shape"] = word_shape(tok)[:12]
-            f["sshape"] = short_shape(tok)
-            for k in range(1, 5):
-                if len(tok) >= k:
-                    f[f"pre{k}"] = tok[:k]
-                    f[f"suf{k}"] = tok[-k:]
-        if "ortho" in g:
-            letters = [c for c in tok if c.isalpha()]
-            if letters and all(c.isupper() for c in letters):
-                f["all_caps"] = True
-            if tok[:1].isupper():
-                f["init_cap"] = True
-            if any(c.isupper() for c in tok[1:]):
-                f["internal_cap"] = True
-            if any(c.isdigit() for c in tok):
-                f["has_digit"] = True
-            if "-" in tok:
-                f["has_hyphen"] = True
-            if any(c in VOWELS for c in tok):
-                f["has_vowel"] = True
-            if ROMAN_FULL.match(tok):
-                f["roman"] = True
-            if not is_word(tok):
-                f["punct"] = True
-            f["len"] = _bucket(len(tok), 10)
-            f["n_upper"] = _bucket(upper_count(tok), 4)
-            if len(tok) > 2 and tok.endswith("s") and upper_count(tok[:-1]) >= 2:
-                f["plural_abbr"] = True
-        if "dict" in g and is_word(tok):
-            if in_lexicon(tok, self.lexicon):
-                f["in_dict"] = True
+    def _token_features(self, token, pos_tag=None, tag=None):
+        features = {}
+        if "form" in self.groups:
+            features["lower"] = token.lower()
+            features["shape"] = word_shape(token)[:12]
+            features["sshape"] = short_shape(token)
+            for length in range(1, min(len(token), 4) + 1):
+                features[f"pre{length}"] = token[:length]
+                features[f"suf{length}"] = token[-length:]
+        if "ortho" in self.groups:
+            letters = [char for char in token if char.isalpha()]
+            if letters and all(char.isupper() for char in letters):
+                features["all_caps"] = True
+            if token[:1].isupper():
+                features["init_cap"] = True
+            if any(char.isupper() for char in token[1:]):
+                features["internal_cap"] = True
+            if any(char.isdigit() for char in token):
+                features["has_digit"] = True
+            if "-" in token:
+                features["has_hyphen"] = True
+            if any(char in VOWELS for char in token):
+                features["has_vowel"] = True
+            if ROMAN_FULL.match(token):
+                features["roman"] = True
+            if not is_word(token):
+                features["punct"] = True
+            features["len"] = _bucket(len(token), 10)
+            features["n_upper"] = _bucket(upper_count(token), 4)
+            if len(token) > 2 and token.endswith("s") and upper_count(token[:-1]) >= 2:
+                features["plural_abbr"] = True
+        if "dict" in self.groups and is_word(token):
+            if in_lexicon(token, self.lexicon):
+                features["in_dict"] = True
             else:
-                f["oov"] = True
-        if "pos" in g and pos_tag is not None:
-            f["pos"] = pos_tag
+                features["oov"] = True
+        if "csit" in self.groups and (
+            token in self.csit_acronyms or strip_plural(token) in self.csit_acronyms
+        ):
+            features["in_csit"] = True
+        if "pos" in self.groups and pos_tag is not None:
+            features["pos"] = pos_tag
             if tag is not None:
-                f["tag"] = tag
-        return f
-
-    # ---- sentence-level features --------------------------------------------
+                features["tag"] = tag
+        return features
 
     def _paren_features(self, tokens):
         n = len(tokens)
@@ -151,7 +164,7 @@ class FeatureExtractor:
     def _defmatch_features(self, tokens):
         n = len(tokens)
         words_before = []  # first letters of word tokens seen so far
-        feats = [dict() for _ in range(n)]
+        feats = [{} for _ in range(n)]
         for i, t in enumerate(tokens):
             if is_word(t) and t[0].isalpha() and 2 <= len(t) <= 10:
                 window = words_before[-3 * len(t):]
@@ -180,7 +193,7 @@ class FeatureExtractor:
         return feats
 
     def _rule_features(self, tokens):
-        feats = [dict() for _ in tokens]
+        feats = [{} for _ in tokens]
         for sf_idx, (s, e) in find_definitions(tokens) + find_glossary_definitions(tokens):
             feats[sf_idx]["rule_sf"] = True
             feats[s]["rule_lf"] = "B"
@@ -193,45 +206,41 @@ class FeatureExtractor:
         return feats
 
     def sent2features(self, tokens, pos=None, tags=None):
-        """List of feature dicts, one per token."""
-        n = len(tokens)
+        """Build one feature dictionary per token, in sentence order."""
         use_pos = "pos" in self.groups and pos is not None
-        base = [self._token_features(t, pos[i] if use_pos else None,
-                                     tags[i] if use_pos and tags else None)
-                for i, t in enumerate(tokens)]
-        extra = [dict() for _ in range(n)]
-        if "paren" in self.groups:
-            for e, f in zip(extra, self._paren_features(tokens)):
-                e.update(f)
-        if "defmatch" in self.groups:
-            for e, f in zip(extra, self._defmatch_features(tokens)):
-                e.update(f)
-        if "rules" in self.groups:
-            for e, f in zip(extra, self._rule_features(tokens)):
-                e.update(f)
+        token_features = [
+            self._token_features(
+                token, pos[i] if use_pos else None, tags[i] if use_pos and tags else None,
+            )
+            for i, token in enumerate(tokens)
+        ]
+        for group, extract in (
+            ("paren", self._paren_features),
+            ("defmatch", self._defmatch_features),
+            ("rules", self._rule_features),
+        ):
+            if group in self.groups:
+                for features, extra in zip(token_features, extract(tokens)):
+                    features.update(extra)
 
-        neighbour_keys = ("lower", "sshape", "all_caps", "init_cap", "internal_cap",
-                          "has_digit", "punct", "in_dict", "oov", "pos", "rule_lf", "rule_sf")
-        out = []
-        for i in range(n):
-            f = {"bias": 1.0}
-            f.update(base[i])
-            f.update(extra[i])
+        sentence_features = []
+        for i, current in enumerate(token_features):
+            features = {"bias": 1.0, **current}
             if i == 0:
-                f["BOS"] = True
-            if i == n - 1:
-                f["EOS"] = True
+                features["BOS"] = True
+            if i == len(tokens) - 1:
+                features["EOS"] = True
             if "context" in self.groups:
-                for off in (-2, -1, 1, 2):
-                    j = i + off
-                    if 0 <= j < n:
-                        src = {**base[j], **extra[j]}
-                        for k in neighbour_keys:
-                            if k in src:
-                                f[f"{off:+d}:{k}"] = src[k]
+                for offset in (-2, -1, 1, 2):
+                    neighbor_index = i + offset
+                    if 0 <= neighbor_index < len(tokens):
+                        neighbor = token_features[neighbor_index]
+                        for key in NEIGHBOR_FEATURES:
+                            if key in neighbor:
+                                features[f"{offset:+d}:{key}"] = neighbor[key]
                     else:
-                        f[f"{off:+d}:pad"] = True
-                if i + 1 < n:  # bigram cues
-                    f["lower|+1"] = f"{tokens[i].lower()}|{tokens[i + 1].lower()}"
-            out.append(f)
-        return out
+                        features[f"{offset:+d}:pad"] = True
+                if i + 1 < len(tokens):
+                    features["lower|+1"] = f"{tokens[i].lower()}|{tokens[i + 1].lower()}"
+            sentence_features.append(features)
+        return sentence_features

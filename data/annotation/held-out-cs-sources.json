@@ -1,0 +1,343 @@
+{
+  "source": "ACL Anthology, 2025 Findings",
+  "metadata_url": "https://raw.githubusercontent.com/acl-org/acl-anthology/37f8244/data/xml/2025.findings.xml",
+  "metadata_sha256": "e145515c8f035d5537dbb5dff9906ee3117e319f702c515150ca2e18b3979d58",
+  "abstract_license": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Whitespace normalized, segmented into sentences, and annotated with spans and links.",
+  "papers": [
+    {
+      "doc_id": "2025.findings-acl.302",
+      "url": "https://aclanthology.org/2025.findings-acl.302/",
+      "title": "Rationales Are Not Silver Bullets: Measuring the Impact of Rationales on Model Performance and Reliability",
+      "authors": [
+        "Chiwei Zhu",
+        "Benfeng Xu",
+        "An Yang",
+        "Junyang Lin",
+        "Quan Wang",
+        "Chang Zhou",
+        "Zhendong Mao"
+      ],
+      "doi": "10.18653/v1/2025.findings-acl.302",
+      "normalized_abstract_sha256": "d56aac2c15af08df01472256bd15cd96ee3d25ee705c851c88728c3c1b050427"
+    },
+    {
+      "doc_id": "2025.findings-acl.381",
+      "url": "https://aclanthology.org/2025.findings-acl.381/",
+      "title": "TableDreamer: Progressive and Weakness-guided Data Synthesis from Scratch for Table Instruction Tuning",
+      "authors": [
+        "Mingyu Zheng",
+        "Zhifan Feng",
+        "Jia Wang",
+        "Lanrui Wang",
+        "Zheng Lin",
+        "Hao Yang",
+        "Weiping Wang"
+      ],
+      "doi": "10.18653/v1/2025.findings-acl.381",
+      "normalized_abstract_sha256": "5f0efbc856cbe310b0ecd47d06dab3fd2bc105d48aa568dbab07e85d0f75e28c"
+    },
+    {
+      "doc_id": "2025.findings-acl.462",
+      "url": "https://aclanthology.org/2025.findings-acl.462/",
+      "title": "AMoPO: Adaptive Multi-objective Preference Optimization without Reward Models and Reference Models",
+      "authors": [
+        "Qi Liu",
+        "Jingqing Ruan",
+        "Hao Li",
+        "Haodong Zhao",
+        "Desheng Wang",
+        "Jiansong Chen",
+        "Wan Guanglu",
+        "Xunliang Cai",
+        "Zhi Zheng",
+        "Tong Xu"
+      ],
+      "doi": "10.18653/v1/2025.findings-acl.462",
+      "normalized_abstract_sha256": "b19d0f232ef774dc54d9f0ed11f4649cc96453e3bf8da151c5fa1a3b3825e1c7"
+    },
+    {
+      "doc_id": "2025.findings-acl.473",
+      "url": "https://aclanthology.org/2025.findings-acl.473/",
+      "title": "Self-Steering Optimization: Autonomous Preference Optimization for Large Language Models",
+      "authors": [
+        "Hao Xiang",
+        "Bowen Yu",
+        "Hongyu Lin",
+        "Keming Lu",
+        "Yaojie Lu",
+        "Xianpei Han",
+        "Ben He",
+        "Le Sun",
+        "Jingren Zhou",
+        "Junyang Lin"
+      ],
+      "doi": "10.18653/v1/2025.findings-acl.473",
+      "normalized_abstract_sha256": "f0eb02f3ba0cbfa6eaf973cd85d8fa65b16921a75de4fd8b4f5d94de8a7c2383"
+    },
+    {
+      "doc_id": "2025.findings-acl.531",
+      "url": "https://aclanthology.org/2025.findings-acl.531/",
+      "title": "Learning to Play Like Humans: A Framework for LLM Adaptation in Interactive Fiction Games",
+      "authors": [
+        "Jinming Zhang",
+        "Yunfei Long"
+      ],
+      "doi": "10.18653/v1/2025.findings-acl.531",
+      "normalized_abstract_sha256": "bc472b9f7b92929228327e2290babbbd714ffcca3623c91cf188d3105c8601c9"
+    },
+    {
+      "doc_id": "2025.findings-acl.596",
+      "url": "https://aclanthology.org/2025.findings-acl.596/",
+      "title": "M3HG: Multimodal, Multi-scale, and Multi-type Node Heterogeneous Graph for Emotion Cause Triplet Extraction in Conversations",
+      "authors": [
+        "Qiao Liang",
+        "Ying Shen",
+        "Tiantian Chen",
+        "Lin Zhang"
+      ],
+      "doi": "10.18653/v1/2025.findings-acl.596",
+      "normalized_abstract_sha256": "b6a67b585d960f8877fb6f0b661c44672d8e58caf3dc551ca1ace1e405cb264e"
+    },
+    {
+      "doc_id": "2025.findings-acl.1336",
+      "url": "https://aclanthology.org/2025.findings-acl.1336/",
+      "title": "BridG MT: Enhancing LLMs’ Machine Translation Capabilities with Sentence Bridging and Gradual MT",
+      "authors": [
+        "Seungwoo Choi",
+        "Gahyun Yoo",
+        "Jay-Yoon Lee"
+      ],
+      "doi": "10.18653/v1/2025.findings-acl.1336",
+      "normalized_abstract_sha256": "018cc37023fbed197d223fe940a3098b77e24abc4a0cdbf779fc858b1b02adda"
+    },
+    {
+      "doc_id": "2025.findings-acl.1365",
+      "url": "https://aclanthology.org/2025.findings-acl.1365/",
+      "title": "ECoRAG: Evidentiality-guided Compression for Long Context RAG",
+      "authors": [
+        "Yeonseok Jeong",
+        "Jinsu Kim",
+        "Dohyeon Lee",
+        "Seung-won Hwang"
+      ],
+      "doi": "10.18653/v1/2025.findings-acl.1365",
+      "normalized_abstract_sha256": "1cbadce4dd0484efe115e247ee50440b01a3dd76df59a5cb501ff13636684552"
+    },
+    {
+      "doc_id": "2025.findings-emnlp.303",
+      "url": "https://aclanthology.org/2025.findings-emnlp.303/",
+      "title": "ResearchArena: Benchmarking Large Language Models’ Ability to Collect and Organize Information as Research Agents",
+      "authors": [
+        "Hao Kang",
+        "Chenyan Xiong"
+      ],
+      "doi": "10.18653/v1/2025.findings-emnlp.303",
+      "normalized_abstract_sha256": "77fe170cea9f716dff2bc033050337a2c1c00db13cf86430fe2b7eb102664118"
+    },
+    {
+      "doc_id": "2025.findings-emnlp.382",
+      "url": "https://aclanthology.org/2025.findings-emnlp.382/",
+      "title": "FinGEAR: Financial Mapping-Guided Enhanced Answer Retrieval",
+      "authors": [
+        "Ying Li",
+        "Mengyu Wang",
+        "Miguel de Carvalho",
+        "Sotirios Sabanis",
+        "Tiejun Ma"
+      ],
+      "doi": "10.18653/v1/2025.findings-emnlp.382",
+      "normalized_abstract_sha256": "fb2b7fb1ef981ab6ff48469b376cde0d1388db7bbab17fc17026cad8459fa082"
+    },
+    {
+      "doc_id": "2025.findings-emnlp.474",
+      "url": "https://aclanthology.org/2025.findings-emnlp.474/",
+      "title": "A Survey of Multilingual Reasoning in Language Models",
+      "authors": [
+        "Akash Ghosh",
+        "Debayan Datta",
+        "Sriparna Saha",
+        "Chirag Agarwal"
+      ],
+      "doi": "10.18653/v1/2025.findings-emnlp.474",
+      "normalized_abstract_sha256": "2664b8e3389c136e90d0459c0b3f70728f6739827de8429f6f62178ea914bdfe"
+    },
+    {
+      "doc_id": "2025.findings-emnlp.532",
+      "url": "https://aclanthology.org/2025.findings-emnlp.532/",
+      "title": "Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing Styles of Everyday Authors",
+      "authors": [
+        "Zhengxiang Wang",
+        "Nafis Irtiza Tripto",
+        "Solha Park",
+        "Zhenzhen Li",
+        "Jiawei Zhou"
+      ],
+      "doi": "10.18653/v1/2025.findings-emnlp.532",
+      "normalized_abstract_sha256": "c69a2af0e572ca0c8139540d2691475675050ee85597463a5eefdd2428c84238"
+    },
+    {
+      "doc_id": "2025.findings-emnlp.597",
+      "url": "https://aclanthology.org/2025.findings-emnlp.597/",
+      "title": "NER Retriever: Zero-Shot Named Entity Retrieval with Type-Aware Embeddings",
+      "authors": [
+        "Or Shachar",
+        "Uri Katz",
+        "Yoav Goldberg",
+        "Oren Glickman"
+      ],
+      "doi": "10.18653/v1/2025.findings-emnlp.597",
+      "normalized_abstract_sha256": "747db0154cb1f59ab200ae5238e36c7ba6694275bb65a8a886e6385161aa523a"
+    },
+    {
+      "doc_id": "2025.findings-emnlp.1338",
+      "url": "https://aclanthology.org/2025.findings-emnlp.1338/",
+      "title": "Forget the Unneeded: Backdooring Large Language Models via Contrastive-enhanced Machine Unlearning",
+      "authors": [
+        "Shiji Yang",
+        "Shu Zhao",
+        "Congyao Mei",
+        "Zhen Yang",
+        "Jie Chen",
+        "Fulan Qian",
+        "Zhen Duan",
+        "Yanping Zhang"
+      ],
+      "doi": "10.18653/v1/2025.findings-emnlp.1338",
+      "normalized_abstract_sha256": "c09d409512c2897d3352ba30cb3663a7f42bca7d082a781792374f4ec9abe9a2"
+    },
+    {
+      "doc_id": "2025.findings-emnlp.1367",
+      "url": "https://aclanthology.org/2025.findings-emnlp.1367/",
+      "title": "Uncertainty-Aware Answer Selection for Improved Reasoning in Multi-LLM Systems",
+      "authors": [
+        "Aakriti Agrawal",
+        "Rohith Aralikatti",
+        "Anirudh Satheesh",
+        "Souradip Chakraborty",
+        "Amrit Singh Bedi",
+        "Furong Huang"
+      ],
+      "doi": "10.18653/v1/2025.findings-emnlp.1367",
+      "normalized_abstract_sha256": "7ada00e28407da1b02853f6ae60bc88934e256a35380b8615dccf451b260ca6d"
+    },
+    {
+      "doc_id": "2025.findings-emnlp.1403",
+      "url": "https://aclanthology.org/2025.findings-emnlp.1403/",
+      "title": "Evaluating Cultural Knowledge and Reasoning in LLMs Through Persian Allusions",
+      "authors": [
+        "Melika Nobakhtian",
+        "Yadollah Yaghoobzadeh",
+        "Mohammad Taher Pilehvar"
+      ],
+      "doi": "10.18653/v1/2025.findings-emnlp.1403",
+      "normalized_abstract_sha256": "67c4e3abb50cf3ccd2d70bc947024c4596652a1a305d57f9b463b552d974bcb4"
+    },
+    {
+      "doc_id": "2025.findings-naacl.101",
+      "url": "https://aclanthology.org/2025.findings-naacl.101/",
+      "title": "Biases in Opinion Dynamics in Multi-Agent Systems of Large Language Models: A Case Study on Funding Allocation",
+      "authors": [
+        "Pedro Cisneros-Velarde"
+      ],
+      "doi": "10.18653/v1/2025.findings-naacl.101",
+      "normalized_abstract_sha256": "27c058c44b625aa4b61fef90520377754355a76705a006997dab6427ade69170"
+    },
+    {
+      "doc_id": "2025.findings-naacl.141",
+      "url": "https://aclanthology.org/2025.findings-naacl.141/",
+      "title": "INDIC QA BENCHMARK: A Multilingual Benchmark to Evaluate Question Answering capability of LLMs for Indic Languages",
+      "authors": [
+        "Abhishek Kumar Singh",
+        "Vishwajeet Kumar",
+        "Rudra Murthy",
+        "Jaydeep Sen",
+        "Ashish Mittal",
+        "Ganesh Ramakrishnan"
+      ],
+      "doi": "10.18653/v1/2025.findings-naacl.141",
+      "normalized_abstract_sha256": "68eb8592045a4d37e375e58603068e8ce42ff25d006c43b989415456dddb134b"
+    },
+    {
+      "doc_id": "2025.findings-naacl.158",
+      "url": "https://aclanthology.org/2025.findings-naacl.158/",
+      "title": "FIRE: Fact-checking with Iterative Retrieval and Verification",
+      "authors": [
+        "Zhuohan Xie",
+        "Rui Xing",
+        "Yuxia Wang",
+        "Jiahui Geng",
+        "Hasan Iqbal",
+        "Dhruv Sahnan",
+        "Iryna Gurevych",
+        "Preslav Nakov"
+      ],
+      "doi": "10.18653/v1/2025.findings-naacl.158",
+      "normalized_abstract_sha256": "b165e97ec3d889f1861fd0843df2d42f08f58323c202b9e79e104e21dddbde65"
+    },
+    {
+      "doc_id": "2025.findings-naacl.347",
+      "url": "https://aclanthology.org/2025.findings-naacl.347/",
+      "title": "Modeling the Differential Prevalence of Online Supportive Interactions in Private Instant Messages of Adolescents",
+      "authors": [
+        "Ondrej Sotolar",
+        "Michał Tkaczyk",
+        "Jaromír Plhák",
+        "David Smahel"
+      ],
+      "doi": "10.18653/v1/2025.findings-naacl.347",
+      "normalized_abstract_sha256": "af9ab927c93e3fdf4abaf2ebbe76361e8448b16e2b08f3de105fc91af1506446"
+    },
+    {
+      "doc_id": "2025.findings-naacl.366",
+      "url": "https://aclanthology.org/2025.findings-naacl.366/",
+      "title": "Exploring Backward Reasoning in Large Language Models",
+      "authors": [
+        "Leonardo Ranaldi",
+        "Giulia Pucci"
+      ],
+      "doi": "10.18653/v1/2025.findings-naacl.366",
+      "normalized_abstract_sha256": "32bf1c692dc56e527c8bfcf770550b9e3ce8526df65cf75a68e9eeaf76eac28d"
+    },
+    {
+      "doc_id": "2025.findings-naacl.428",
+      "url": "https://aclanthology.org/2025.findings-naacl.428/",
+      "title": "ThoughtSculpt: Reasoning with Intermediate Revision and Search",
+      "authors": [
+        "Yizhou Chi",
+        "Kevin Yang",
+        "Dan Klein"
+      ],
+      "doi": "10.18653/v1/2025.findings-naacl.428",
+      "normalized_abstract_sha256": "f4df975cefde3e7c2faf7544cdbc260fb082c4a42f793de21e023cb62b733e1b"
+    },
+    {
+      "doc_id": "2025.findings-naacl.452",
+      "url": "https://aclanthology.org/2025.findings-naacl.452/",
+      "title": "GraphEval36K: Benchmarking Coding and Reasoning Capabilities of Large Language Models on Graph Datasets",
+      "authors": [
+        "Qiming Wu",
+        "Zichen Chen",
+        "Will Corcoran",
+        "Misha Sra",
+        "Ambuj Singh"
+      ],
+      "doi": "10.18653/v1/2025.findings-naacl.452",
+      "normalized_abstract_sha256": "176ced10d3aabfc14c3ee04f0e8f94bc939ed98274aa2eaea65c121a0ad87bcb"
+    },
+    {
+      "doc_id": "2025.findings-naacl.473",
+      "url": "https://aclanthology.org/2025.findings-naacl.473/",
+      "title": "Seeds of Discourse: A Multilingual Corpus of Direct Quotations from African Media on Agricultural Biotechnologies",
+      "authors": [
+        "Patricia Chiril",
+        "Trevor Spreadbury",
+        "Joeva Sean Rock",
+        "Brian Dowd-Uribe",
+        "David Uminsky"
+      ],
+      "doi": "10.18653/v1/2025.findings-naacl.473",
+      "normalized_abstract_sha256": "658bb63ba3bcc0e22021aaf306a0064374a0b5ab8075e4d33bd49d53c9785e4c"
+    }
+  ]
+}
