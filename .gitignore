@@ -1,4 +1,7 @@
 __pycache__/
-models/
+/models/*
+!/models/crf-plain.pkl
+!/models/crf-schwartz-hearst.pkl
+!/models/crf-kaggle-lexicon.pkl
 results/
 data/processed/pos_cache.json

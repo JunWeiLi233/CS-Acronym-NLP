@@ -20,10 +20,10 @@ python3 src/compare_systems.py
 | **3. Test with bundled SDU training data** | Uses the three saved CRFs to score all seven systems on the bundled test or your own labeled JSONL. |
 | **4. Choose training and test datasets** | Fits on the selected training file and scores on the separate test file. |
 
-Option 3 reuses the compatible saved CRFs in `models/`. The comparison trains
-fresh models if those files are unavailable or you request different training
-settings. Option 3 saves scores and predictions to `results/<dataset>-comparison.json`
-and prints the path. Repeat runs get a numbered filename.
+The repository includes three trained CRFs in `models/`. Install the [spaCy
+English model](#train-and-use-a-crf) to use them with option 3. Each run saves
+scores and predictions to `results/<dataset>-comparison.json` and prints the
+path. Repeat runs get a numbered filename.
 
 To extract abbreviations from new text, run the rule-based predictor.
 

@@ -135,7 +135,8 @@ def load_saved_crfs(args, configurations, *, reuse_saved_for_custom_test=False):
             or args.max_iter not in (None, SAVED_CRF_SETTINGS["max_iterations"])):
         return {}
 
-    if hashlib.sha256(args.data.read_bytes()).hexdigest() != SAVED_CRF_TRAINING_HASH:
+    training_bytes = args.data.read_bytes().replace(b"\r\n", b"\n")
+    if hashlib.sha256(training_bytes).hexdigest() != SAVED_CRF_TRAINING_HASH:
         print("The SDU training file has changed. Training the CRFs for this comparison.")
         return {}
 
